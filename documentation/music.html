@@ -1,0 +1,119 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module music</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>music</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/robz0r/public_html/robpodosek.com/public/zombie/music.py">/home/robz0r/public_html/robpodosek.com/public/zombie/music.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="glob.html">glob</a><br>
+<a href="pygame.mixer.html">pygame.mixer</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="pygame.html">pygame</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="music.html#Music">Music</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Music">class <strong>Music</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;is&nbsp;an&nbsp;abstraction&nbsp;of&nbsp;pygame.mixer&nbsp;and&nbsp;pygame.mixer.music.<br>
+It&nbsp;dynamically&nbsp;loads&nbsp;all&nbsp;MIDI&nbsp;files&nbsp;in&nbsp;the&nbsp;music&nbsp;folder&nbsp;and&nbsp;queues<br>
+them&nbsp;for&nbsp;playback.&nbsp;It&nbsp;provides&nbsp;a&nbsp;number&nbsp;of&nbsp;simple&nbsp;methods&nbsp;to&nbsp;control<br>
+simple&nbsp;attributes&nbsp;of&nbsp;the&nbsp;music.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Music-__init__"><strong>__init__</strong></a>(self, theme<font color="#909090">=False</font>)</dt><dd><tt>Initializes&nbsp;the&nbsp;music&nbsp;<a href="__builtin__.html#object">object</a>.</tt></dd></dl>
+
+<dl><dt><a name="Music-decrease_volume"><strong>decrease_volume</strong></a>(self, step<font color="#909090">=0.10000000000000001</font>)</dt><dd><tt>Decrease&nbsp;the&nbsp;volume.&nbsp;An&nbsp;optional&nbsp;step&nbsp;can&nbsp;be&nbsp;passed&nbsp;which<br>
+determines&nbsp;the&nbsp;interval&nbsp;that&nbsp;the&nbsp;volume&nbsp;decreases&nbsp;between<br>
+MIN_VOLUME&nbsp;and&nbsp;MAX_VOLUME.</tt></dd></dl>
+
+<dl><dt><a name="Music-increase_volume"><strong>increase_volume</strong></a>(self, step<font color="#909090">=0.10000000000000001</font>)</dt><dd><tt>Increase&nbsp;the&nbsp;volume.&nbsp;An&nbsp;optional&nbsp;step&nbsp;can&nbsp;be&nbsp;passed&nbsp;which<br>
+determines&nbsp;the&nbsp;interval&nbsp;that&nbsp;the&nbsp;volume&nbsp;increases&nbsp;between<br>
+MIN_VOLUME&nbsp;and&nbsp;MAX_VOLUME.</tt></dd></dl>
+
+<dl><dt><a name="Music-mute"><strong>mute</strong></a>(self)</dt><dd><tt>Mute&nbsp;the&nbsp;music.</tt></dd></dl>
+
+<dl><dt><a name="Music-next"><strong>next</strong></a>(self)</dt><dd><tt>Skip&nbsp;to&nbsp;the&nbsp;next&nbsp;track.</tt></dd></dl>
+
+<dl><dt><a name="Music-pause"><strong>pause</strong></a>(self)</dt><dd><tt>Pause&nbsp;the&nbsp;music.</tt></dd></dl>
+
+<dl><dt><a name="Music-play"><strong>play</strong></a>(self)</dt><dd><tt>Plays&nbsp;the&nbsp;current&nbsp;loaded&nbsp;song.</tt></dd></dl>
+
+<dl><dt><a name="Music-prev"><strong>prev</strong></a>(self)</dt><dd><tt>Skip&nbsp;to&nbsp;the&nbsp;previous&nbsp;track.</tt></dd></dl>
+
+<dl><dt><a name="Music-stop"><strong>stop</strong></a>(self)</dt><dd><tt>Stop&nbsp;the&nbsp;music.</tt></dd></dl>
+
+<dl><dt><a name="Music-unmute"><strong>unmute</strong></a>(self)</dt><dd><tt>Unmute&nbsp;the&nbsp;music.</tt></dd></dl>
+
+<dl><dt><a name="Music-unpause"><strong>unpause</strong></a>(self)</dt><dd><tt>Unpause&nbsp;the&nbsp;music.</tt></dd></dl>
+
+<dl><dt><a name="Music-update"><strong>update</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;gets&nbsp;called&nbsp;once&nbsp;per&nbsp;tick&nbsp;to&nbsp;check&nbsp;if<br>
+the&nbsp;song&nbsp;is&nbsp;over&nbsp;and&nbsp;needs&nbsp;to&nbsp;be&nbsp;changed&nbsp;to&nbsp;the<br>
+next&nbsp;track.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_VOLUME</strong> = 1.0</dl>
+
+<dl><dt><strong>MIN_VOLUME</strong> = 0.0</dl>
+
+<dl><dt><strong>bitsize</strong> = -16</dl>
+
+<dl><dt><strong>buffer</strong> = 1024</dl>
+
+<dl><dt><strong>channels</strong> = 2</dl>
+
+<dl><dt><strong>current_title</strong> = 0</dl>
+
+<dl><dt><strong>freq</strong> = 44100</dl>
+
+<dl><dt><strong>is_theme</strong> = False</dl>
+
+<dl><dt><strong>music_path</strong> = 'music'</dl>
+
+<dl><dt><strong>theme_path</strong> = 'music/theme.mid'</dl>
+
+<dl><dt><strong>titles</strong> = []</dl>
+
+<dl><dt><strong>volume</strong> = 0.80000000000000004</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

@@ -1,0 +1,10 @@
+1. bat
+2. pistol
+3. shotgun
+4. automatic
+5. grenade
+6. homing
+7. flamethrower
+8. laser
+9. flare
+0. counter zombie attack!!!

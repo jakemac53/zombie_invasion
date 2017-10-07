@@ -1,0 +1,2548 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module game_classes</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>game_classes</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/robz0r/public_html/robpodosek.com/public/zombie/game_classes.py">/home/robz0r/public_html/robpodosek.com/public/zombie/game_classes.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pygame.color.html">pygame.color</a><br>
+<a href="globalvars.html">globalvars</a><br>
+</td><td width="25%" valign=top><a href="math.html">math</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="pygame.html">pygame</a><br>
+<a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="game_classes.html#Level">Level</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="game_classes.html#Button">Button</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#GameObject">GameObject</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="game_classes.html#BuildingSprite">BuildingSprite</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#BulletSprite">BulletSprite</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#Cursor">Cursor</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#DudeSprite">DudeSprite</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#EnemyObject">EnemyObject</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="game_classes.html#BigZombieSprite">BigZombieSprite</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#DogSprite">DogSprite</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#UberZombieSprite">UberZombieSprite</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#ZombieSprite">ZombieSprite</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="game_classes.html#GrenadeSprite">GrenadeSprite</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#HomingSprite">HomingSprite</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#MineSprite">MineSprite</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="game_classes.html#ItemSprite">ItemSprite</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_classes.html#SpawnPoint">SpawnPoint</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BigZombieSprite">class <strong>BigZombieSprite</strong></a>(<a href="game_classes.html#EnemyObject">EnemyObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#BigZombie&nbsp;CLASS<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#BigZombieSprite">BigZombieSprite</a></dd>
+<dd><a href="game_classes.html#EnemyObject">EnemyObject</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BigZombieSprite-__init__"><strong>__init__</strong></a>(self, position, groups, spawn<font color="#909090">=False</font>)</dt><dd><tt>Constructor&nbsp;for&nbsp;bigzombie,&nbsp;must&nbsp;have&nbsp;position&nbsp;and&nbsp;groups.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;contains&nbsp;the<br>
+groups&nbsp;that&nbsp;you&nbsp;care&nbsp;about&nbsp;colliding&nbsp;with&nbsp;when&nbsp;you&nbsp;spawn.&nbsp;If&nbsp;spawn&nbsp;is&nbsp;specified&nbsp;it&nbsp;will<br>
+spawn&nbsp;on&nbsp;the&nbsp;correct&nbsp;side&nbsp;of&nbsp;that&nbsp;spawn&nbsp;instead&nbsp;of&nbsp;the&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-update"><strong>update</strong></a>(self, grid, enemy_group, building_group, screen)</dt><dd><tt>Just&nbsp;call&nbsp;your&nbsp;parent&nbsp;update&nbsp;function,&nbsp;with&nbsp;same&nbsp;args.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_HEALTH</strong> = 50</dl>
+
+<dl><dt><strong>MAX_SPEED</strong> = 1.2</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>speed</strong> = 0.0</dl>
+
+<dl><dt><strong>strength</strong> = 2</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#EnemyObject">EnemyObject</a>:<br>
+<dl><dt><a name="BigZombieSprite-face_dude"><strong>face_dude</strong></a>(self, dude)</dt><dd><tt>Make&nbsp;the&nbsp;enemy&nbsp;face&nbsp;the&nbsp;dude!</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;the&nbsp;kill&nbsp;method&nbsp;so&nbsp;you&nbsp;turn&nbsp;into&nbsp;blood,&nbsp;then&nbsp;call&nbsp;it&nbsp;later&nbsp;in&nbsp;update.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-set_rect"><strong>set_rect</strong></a>(self)</dt><dd><tt>Set&nbsp;your&nbsp;rectangle&nbsp;based&nbsp;on&nbsp;your&nbsp;image.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-spawn_location"><strong>spawn_location</strong></a>(self, position, spawn<font color="#909090">=False</font>)</dt><dd><tt>Spawns&nbsp;you&nbsp;in&nbsp;the&nbsp;correct&nbsp;location,&nbsp;either&nbsp;a&nbsp;position&nbsp;or&nbsp;based&nbsp;on&nbsp;a&nbsp;spawn&nbsp;if&nbsp;specified.<br>
+This&nbsp;will&nbsp;spawn&nbsp;you&nbsp;on&nbsp;the&nbsp;correct&nbsp;side&nbsp;of&nbsp;the&nbsp;spawn&nbsp;based&nbsp;on&nbsp;its&nbsp;spawn&nbsp;side.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#EnemyObject">EnemyObject</a>:<br>
+<dl><dt><strong>CHECK_SIGHT_INTERVAL</strong> = 30</dl>
+
+<dl><dt><strong>ITEM_CHANCE</strong> = 10</dl>
+
+<dl><dt><strong>MAX_POINTS</strong> = 10</dl>
+
+<dl><dt><strong>MAX_WANDER</strong> = 60</dl>
+
+<dl><dt><strong>alive</strong> = True</dl>
+
+<dl><dt><strong>check_sight</strong> = 0</dl>
+
+<dl><dt><strong>dead</strong> = None</dl>
+
+<dl><dt><strong>dead_direction</strong> = None</dl>
+
+<dl><dt><strong>dead_timer</strong> = 900</dl>
+
+<dl><dt><strong>target</strong> = None</dl>
+
+<dl><dt><strong>wander</strong> = 0</dl>
+
+<dl><dt><strong>wander_move</strong> = True</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="BigZombieSprite-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="BigZombieSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BigZombieSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#BigZombieSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="BigZombieSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#BigZombieSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#BigZombieSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="BigZombieSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BuildingSprite">class <strong>BuildingSprite</strong></a>(<a href="game_classes.html#GameObject">GameObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;building&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#BuildingSprite">BuildingSprite</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BuildingSprite-__init__"><strong>__init__</strong></a>(self, rect, water<font color="#909090">=False</font>)</dt><dd><tt>Constructor&nbsp;for&nbsp;the&nbsp;building,&nbsp;takes&nbsp;a&nbsp;rect.&nbsp;The&nbsp;water&nbsp;arg&nbsp;currently&nbsp;does&nbsp;nothing.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;this&nbsp;so&nbsp;buildings&nbsp;cannot&nbsp;be&nbsp;killed.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-update"><strong>update</strong></a>(self, screen)</dt><dd><tt>Draw&nbsp;the&nbsp;building&nbsp;on&nbsp;the&nbsp;screen&nbsp;surface&nbsp;based&nbsp;on&nbsp;its&nbsp;rect.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>water</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="BuildingSprite-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="BuildingSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BuildingSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#BuildingSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="BuildingSprite-alive"><strong>alive</strong></a>(self)</dt><dd><tt><a href="#BuildingSprite-alive">alive</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;to&nbsp;see&nbsp;if&nbsp;the&nbsp;sprite&nbsp;is&nbsp;in&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+Returns&nbsp;true&nbsp;if&nbsp;this&nbsp;sprite&nbsp;is&nbsp;a&nbsp;member&nbsp;of&nbsp;any&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#BuildingSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#BuildingSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="BuildingSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BulletSprite">class <strong>BulletSprite</strong></a>(<a href="game_classes.html#GameObject">GameObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>General&nbsp;bullet&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#BulletSprite">BulletSprite</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BulletSprite-__init__"><strong>__init__</strong></a>(self, position, direction, dude, MAX_STRENGTH<font color="#909090">=False</font>, SHOT_DELAY<font color="#909090">=False</font>)</dt><dd><tt>Constructor&nbsp;for&nbsp;bullets,&nbsp;must&nbsp;take&nbsp;a&nbsp;<a href="#BulletSprite-position">position</a>(of&nbsp;the&nbsp;dude),&nbsp;direction,&nbsp;and&nbsp;<a href="#BulletSprite-dude">dude</a>(the&nbsp;dude&nbsp;who<br>
+shot&nbsp;the&nbsp;bullet).&nbsp;Optional&nbsp;MAX_STRENGTH&nbsp;and&nbsp;SHOT_DELAY&nbsp;args&nbsp;can&nbsp;change&nbsp;those&nbsp;attributes<br>
+respectively.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;the&nbsp;kill&nbsp;method&nbsp;and&nbsp;display&nbsp;blood&nbsp;splatter&nbsp;instead.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-start_position"><strong>start_position</strong></a>(self, position, direction)</dt><dd><tt>Set&nbsp;the&nbsp;correct&nbsp;start&nbsp;position&nbsp;from&nbsp;the&nbsp;one&nbsp;given.&nbsp;The&nbsp;position&nbsp;arg&nbsp;represents&nbsp;the&nbsp;dudes<br>
+position&nbsp;not&nbsp;where&nbsp;you&nbsp;actually&nbsp;want&nbsp;it&nbsp;to&nbsp;start,&nbsp;and&nbsp;this&nbsp;does&nbsp;the&nbsp;translation.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-update"><strong>update</strong></a>(self, grid, screen)</dt><dd><tt>Move&nbsp;the&nbsp;bullet.&nbsp;The&nbsp;grid&nbsp;should&nbsp;be&nbsp;the&nbsp;entire&nbsp;grid.&nbsp;The&nbsp;screen&nbsp;is&nbsp;the&nbsp;surface&nbsp;used&nbsp;to<br>
+draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_SPEED</strong> = 15</dl>
+
+<dl><dt><strong>MAX_STRENGTH</strong> = 7</dl>
+
+<dl><dt><strong>SHOT_DELAY</strong> = 7</dl>
+
+<dl><dt><strong>alive</strong> = True</dl>
+
+<dl><dt><strong>dead</strong> = None</dl>
+
+<dl><dt><strong>dead_timer</strong> = 300</dl>
+
+<dl><dt><strong>dude</strong> = None</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>speed</strong> = 0</dl>
+
+<dl><dt><strong>strength</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="BulletSprite-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="BulletSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BulletSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#BulletSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="BulletSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#BulletSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#BulletSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="BulletSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Button">class <strong>Button</strong></a>(<a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;represents&nbsp;clickable&nbsp;button&nbsp;with&nbsp;text&nbsp;on&nbsp;it&nbsp;and&nbsp;a&nbsp;gradient&nbsp;background.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#Button">Button</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Button-__init__"><strong>__init__</strong></a>(self, position, text, level, text_color<font color="#909090">=False</font>, hover_text_color<font color="#909090">=False</font>)</dt><dd><tt>Constructor&nbsp;for&nbsp;button&nbsp;class,&nbsp;requires&nbsp;position,&nbsp;text,&nbsp;and&nbsp;<a href="#Button-level">level</a>(which&nbsp;to&nbsp;load).</tt></dd></dl>
+
+<dl><dt><a name="Button-update"><strong>update</strong></a>(self, cursor_group, screen)</dt><dd><tt>Set&nbsp;the&nbsp;correct&nbsp;image&nbsp;if&nbsp;hovering&nbsp;and&nbsp;display&nbsp;the&nbsp;text&nbsp;on&nbsp;the&nbsp;button.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>hover</strong> = None</dl>
+
+<dl><dt><strong>hover_text_color</strong> = (255, 255, 255, 255)</dl>
+
+<dl><dt><strong>level</strong> = None</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = (0, 0, 0, 0)</dl>
+
+<dl><dt><strong>text</strong> = ''</dl>
+
+<dl><dt><strong>text_color</strong> = (0, 0, 0, 255)</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="Button-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Button-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#Button-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="Button-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Button-alive"><strong>alive</strong></a>(self)</dt><dd><tt><a href="#Button-alive">alive</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;to&nbsp;see&nbsp;if&nbsp;the&nbsp;sprite&nbsp;is&nbsp;in&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+Returns&nbsp;true&nbsp;if&nbsp;this&nbsp;sprite&nbsp;is&nbsp;a&nbsp;member&nbsp;of&nbsp;any&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="Button-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#Button-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="Button-kill"><strong>kill</strong></a>(self)</dt><dd><tt><a href="#Button-kill">kill</a>()<br>
+remove&nbsp;this&nbsp;sprite&nbsp;from&nbsp;all&nbsp;groups<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;sprite&nbsp;from&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain<br>
+it.&nbsp;The&nbsp;sprite&nbsp;still&nbsp;exists&nbsp;after&nbsp;calling&nbsp;this,<br>
+so&nbsp;you&nbsp;could&nbsp;use&nbsp;it&nbsp;to&nbsp;remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;all&nbsp;groups,<br>
+and&nbsp;then&nbsp;add&nbsp;it&nbsp;to&nbsp;some&nbsp;other&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="Button-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#Button-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="Button-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Cursor">class <strong>Cursor</strong></a>(<a href="game_classes.html#GameObject">GameObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;aiming&nbsp;cursor&nbsp;class&nbsp;for&nbsp;the&nbsp;players.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#Cursor">Cursor</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Cursor-__init__"><strong>__init__</strong></a>(self, player<font color="#909090">=0</font>)</dt><dd><tt>Constructor&nbsp;for&nbsp;<a href="#Cursor">Cursor</a>,&nbsp;takes&nbsp;optional&nbsp;player&nbsp;that&nbsp;it&nbsp;is&nbsp;attatched&nbsp;to&nbsp;(default&nbsp;0).</tt></dd></dl>
+
+<dl><dt><a name="Cursor-update"><strong>update</strong></a>(self, num_joysticks, screen)</dt><dd><tt>Move&nbsp;the&nbsp;cursor&nbsp;if&nbsp;num_joysticks&gt;0,&nbsp;otherwise&nbsp;it&nbsp;follows&nbsp;the&nbsp;mouse.&nbsp;The&nbsp;screen&nbsp;is&nbsp;only<br>
+used&nbsp;for&nbsp;drawing&nbsp;collision&nbsp;lines.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_SPEED</strong> = 15</dl>
+
+<dl><dt><strong>direction</strong> = 0</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>player</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = (0, 0, 0, 0)</dl>
+
+<dl><dt><strong>spin_speed</strong> = 4</dl>
+
+<dl><dt><strong>visible</strong> = True</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="Cursor-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="Cursor-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="Cursor-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="Cursor-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="Cursor-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="Cursor-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="Cursor-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="Cursor-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Cursor-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#Cursor-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="Cursor-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Cursor-alive"><strong>alive</strong></a>(self)</dt><dd><tt><a href="#Cursor-alive">alive</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;to&nbsp;see&nbsp;if&nbsp;the&nbsp;sprite&nbsp;is&nbsp;in&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+Returns&nbsp;true&nbsp;if&nbsp;this&nbsp;sprite&nbsp;is&nbsp;a&nbsp;member&nbsp;of&nbsp;any&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="Cursor-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#Cursor-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="Cursor-kill"><strong>kill</strong></a>(self)</dt><dd><tt><a href="#Cursor-kill">kill</a>()<br>
+remove&nbsp;this&nbsp;sprite&nbsp;from&nbsp;all&nbsp;groups<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;sprite&nbsp;from&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain<br>
+it.&nbsp;The&nbsp;sprite&nbsp;still&nbsp;exists&nbsp;after&nbsp;calling&nbsp;this,<br>
+so&nbsp;you&nbsp;could&nbsp;use&nbsp;it&nbsp;to&nbsp;remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;all&nbsp;groups,<br>
+and&nbsp;then&nbsp;add&nbsp;it&nbsp;to&nbsp;some&nbsp;other&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="Cursor-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#Cursor-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="Cursor-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DogSprite">class <strong>DogSprite</strong></a>(<a href="game_classes.html#EnemyObject">EnemyObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#DOG&nbsp;CLASS<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#DogSprite">DogSprite</a></dd>
+<dd><a href="game_classes.html#EnemyObject">EnemyObject</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="DogSprite-__init__"><strong>__init__</strong></a>(self, position, groups, spawn<font color="#909090">=None</font>)</dt><dd><tt>Constructor&nbsp;for&nbsp;dogzombie,&nbsp;must&nbsp;have&nbsp;position&nbsp;and&nbsp;groups.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;contains&nbsp;the<br>
+groups&nbsp;that&nbsp;you&nbsp;care&nbsp;about&nbsp;colliding&nbsp;with&nbsp;when&nbsp;you&nbsp;spawn.&nbsp;If&nbsp;spawn&nbsp;is&nbsp;specified&nbsp;it&nbsp;will<br>
+spawn&nbsp;on&nbsp;the&nbsp;correct&nbsp;side&nbsp;of&nbsp;that&nbsp;spawn&nbsp;instead&nbsp;of&nbsp;the&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-update"><strong>update</strong></a>(self, grid, enemy_group, building_group, screen)</dt><dd><tt>Just&nbsp;call&nbsp;your&nbsp;parent&nbsp;update&nbsp;function,&nbsp;with&nbsp;same&nbsp;args.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_HEALTH</strong> = 8</dl>
+
+<dl><dt><strong>MAX_SPEED</strong> = 4.0</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>speed</strong> = 0.0</dl>
+
+<dl><dt><strong>strength</strong> = 0.75</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#EnemyObject">EnemyObject</a>:<br>
+<dl><dt><a name="DogSprite-face_dude"><strong>face_dude</strong></a>(self, dude)</dt><dd><tt>Make&nbsp;the&nbsp;enemy&nbsp;face&nbsp;the&nbsp;dude!</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;the&nbsp;kill&nbsp;method&nbsp;so&nbsp;you&nbsp;turn&nbsp;into&nbsp;blood,&nbsp;then&nbsp;call&nbsp;it&nbsp;later&nbsp;in&nbsp;update.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-set_rect"><strong>set_rect</strong></a>(self)</dt><dd><tt>Set&nbsp;your&nbsp;rectangle&nbsp;based&nbsp;on&nbsp;your&nbsp;image.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-spawn_location"><strong>spawn_location</strong></a>(self, position, spawn<font color="#909090">=False</font>)</dt><dd><tt>Spawns&nbsp;you&nbsp;in&nbsp;the&nbsp;correct&nbsp;location,&nbsp;either&nbsp;a&nbsp;position&nbsp;or&nbsp;based&nbsp;on&nbsp;a&nbsp;spawn&nbsp;if&nbsp;specified.<br>
+This&nbsp;will&nbsp;spawn&nbsp;you&nbsp;on&nbsp;the&nbsp;correct&nbsp;side&nbsp;of&nbsp;the&nbsp;spawn&nbsp;based&nbsp;on&nbsp;its&nbsp;spawn&nbsp;side.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#EnemyObject">EnemyObject</a>:<br>
+<dl><dt><strong>CHECK_SIGHT_INTERVAL</strong> = 30</dl>
+
+<dl><dt><strong>ITEM_CHANCE</strong> = 10</dl>
+
+<dl><dt><strong>MAX_POINTS</strong> = 10</dl>
+
+<dl><dt><strong>MAX_WANDER</strong> = 60</dl>
+
+<dl><dt><strong>alive</strong> = True</dl>
+
+<dl><dt><strong>check_sight</strong> = 0</dl>
+
+<dl><dt><strong>dead</strong> = None</dl>
+
+<dl><dt><strong>dead_direction</strong> = None</dl>
+
+<dl><dt><strong>dead_timer</strong> = 900</dl>
+
+<dl><dt><strong>target</strong> = None</dl>
+
+<dl><dt><strong>wander</strong> = 0</dl>
+
+<dl><dt><strong>wander_move</strong> = True</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="DogSprite-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="DogSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="DogSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#DogSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="DogSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#DogSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#DogSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="DogSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DudeSprite">class <strong>DudeSprite</strong></a>(<a href="game_classes.html#GameObject">GameObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;general&nbsp;player&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#DudeSprite">DudeSprite</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="DudeSprite-__init__"><strong>__init__</strong></a>(self, position, player<font color="#909090">=0</font>)</dt><dd><tt>Constructor&nbsp;for&nbsp;a&nbsp;Dude,&nbsp;takes&nbsp;a&nbsp;position&nbsp;and&nbsp;optional&nbsp;player&nbsp;number(defaults&nbsp;to&nbsp;0).</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;the&nbsp;kill&nbsp;method&nbsp;to&nbsp;simply&nbsp;make&nbsp;him&nbsp;not&nbsp;alive&nbsp;so&nbsp;he&nbsp;can&nbsp;be&nbsp;revived.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-restore"><strong>restore</strong></a>(self)</dt><dd><tt>Restores&nbsp;all&nbsp;of&nbsp;the&nbsp;dudes&nbsp;initial&nbsp;attributes,&nbsp;used&nbsp;when&nbsp;loading&nbsp;new&nbsp;level.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-set_pic"><strong>set_pic</strong></a>(self)</dt><dd><tt>Set&nbsp;your&nbsp;picture&nbsp;(and&nbsp;mask)&nbsp;based&nbsp;on&nbsp;your&nbsp;weapon&nbsp;and&nbsp;direction.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-set_rect"><strong>set_rect</strong></a>(self, small<font color="#909090">=False</font>)</dt><dd><tt>Sets&nbsp;your&nbsp;rectangle&nbsp;to&nbsp;the&nbsp;normal&nbsp;one&nbsp;for&nbsp;drawing&nbsp;or&nbsp;small&nbsp;one&nbsp;for&nbsp;collisions.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-turn_around"><strong>turn_around</strong></a>(self, cursor, degrees<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;turn&nbsp;around&nbsp;amount&nbsp;dictated&nbsp;by&nbsp;degrees,&nbsp;or&nbsp;180&nbsp;if&nbsp;not&nbsp;specified.&nbsp;The&nbsp;cursor&nbsp;should&nbsp;be&nbsp;the<br>
+dudes&nbsp;cursor&nbsp;and&nbsp;it&nbsp;will&nbsp;be&nbsp;moved&nbsp;accordingly.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-update"><strong>update</strong></a>(self, num_joysticks, grid, cursor_group, screen)</dt><dd><tt>Move&nbsp;the&nbsp;player&nbsp;and&nbsp;do&nbsp;all&nbsp;relevant&nbsp;stuff.&nbsp;The&nbsp;num_joysticks&nbsp;argument&nbsp;informs&nbsp;it&nbsp;whether&nbsp;you<br>
+are&nbsp;using&nbsp;joysticks&nbsp;or&nbsp;mouse/keyboard.&nbsp;The&nbsp;grid&nbsp;should&nbsp;be&nbsp;the&nbsp;entire&nbsp;grid.&nbsp;The&nbsp;cursor_group<br>
+must&nbsp;contain&nbsp;a&nbsp;cursor&nbsp;with&nbsp;same&nbsp;player&nbsp;number&nbsp;as&nbsp;the&nbsp;dude.&nbsp;The&nbsp;screen&nbsp;is&nbsp;the&nbsp;surface&nbsp;used&nbsp;to<br>
+draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-use_health"><strong>use_health</strong></a>(self)</dt><dd><tt>Use&nbsp;a&nbsp;healthpack&nbsp;if&nbsp;you&nbsp;have&nbsp;one.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_HEALTH</strong> = 100</dl>
+
+<dl><dt><strong>MAX_HEALTH_PACKS</strong> = 5</dl>
+
+<dl><dt><strong>MAX_SPEED</strong> = 2</dl>
+
+<dl><dt><strong>MAX_STAMINA</strong> = 100</dl>
+
+<dl><dt><strong>SWING_TIME</strong> = 10</dl>
+
+<dl><dt><strong>alive</strong> = True</dl>
+
+<dl><dt><strong>ammo</strong> = None</dl>
+
+<dl><dt><strong>bat</strong> = None</dl>
+
+<dl><dt><strong>bat_mask_image</strong> = None</dl>
+
+<dl><dt><strong>curr_image</strong> = None</dl>
+
+<dl><dt><strong>grenade</strong> = None</dl>
+
+<dl><dt><strong>health_packs</strong> = 0</dl>
+
+<dl><dt><strong>homing</strong> = None</dl>
+
+<dl><dt><strong>mask_image</strong> = None</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>old_direction</strong> = 0</dl>
+
+<dl><dt><strong>pistol</strong> = None</dl>
+
+<dl><dt><strong>player</strong> = 0</dl>
+
+<dl><dt><strong>shot_delay</strong> = 0</dl>
+
+<dl><dt><strong>shotgun</strong> = None</dl>
+
+<dl><dt><strong>sprinting</strong> = False</dl>
+
+<dl><dt><strong>stamina</strong> = 0</dl>
+
+<dl><dt><strong>strength</strong> = 5</dl>
+
+<dl><dt><strong>swinging</strong> = 0</dl>
+
+<dl><dt><strong>uzi</strong> = None</dl>
+
+<dl><dt><strong>weapon</strong> = 0</dl>
+
+<dl><dt><strong>weapons</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="DudeSprite-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="DudeSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="DudeSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#DudeSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="DudeSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#DudeSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#DudeSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="DudeSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="EnemyObject">class <strong>EnemyObject</strong></a>(<a href="game_classes.html#GameObject">GameObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;generic&nbsp;class&nbsp;for&nbsp;enemies,&nbsp;handles&nbsp;basically&nbsp;everything.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#EnemyObject">EnemyObject</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="EnemyObject-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Constructor&nbsp;for&nbsp;enemies.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-face_dude"><strong>face_dude</strong></a>(self, dude)</dt><dd><tt>Make&nbsp;the&nbsp;enemy&nbsp;face&nbsp;the&nbsp;dude!</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;the&nbsp;kill&nbsp;method&nbsp;so&nbsp;you&nbsp;turn&nbsp;into&nbsp;blood,&nbsp;then&nbsp;call&nbsp;it&nbsp;later&nbsp;in&nbsp;update.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-set_rect"><strong>set_rect</strong></a>(self)</dt><dd><tt>Set&nbsp;your&nbsp;rectangle&nbsp;based&nbsp;on&nbsp;your&nbsp;image.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-spawn_location"><strong>spawn_location</strong></a>(self, position, spawn<font color="#909090">=False</font>)</dt><dd><tt>Spawns&nbsp;you&nbsp;in&nbsp;the&nbsp;correct&nbsp;location,&nbsp;either&nbsp;a&nbsp;position&nbsp;or&nbsp;based&nbsp;on&nbsp;a&nbsp;spawn&nbsp;if&nbsp;specified.<br>
+This&nbsp;will&nbsp;spawn&nbsp;you&nbsp;on&nbsp;the&nbsp;correct&nbsp;side&nbsp;of&nbsp;the&nbsp;spawn&nbsp;based&nbsp;on&nbsp;its&nbsp;spawn&nbsp;side.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-update"><strong>update</strong></a>(self, grid, dude_group, building_group, screen)</dt><dd><tt>Move&nbsp;the&nbsp;enemy&nbsp;and&nbsp;do&nbsp;all&nbsp;relevant&nbsp;things.&nbsp;The&nbsp;grid&nbsp;should&nbsp;represent&nbsp;the&nbsp;entire&nbsp;grid.&nbsp;The<br>
+dude_group&nbsp;should&nbsp;have&nbsp;all&nbsp;live&nbsp;dudes&nbsp;and&nbsp;is&nbsp;used&nbsp;for&nbsp;checking&nbsp;sight.&nbsp;The&nbsp;building_group<br>
+can&nbsp;contain&nbsp;all&nbsp;builidings&nbsp;but&nbsp;could&nbsp;be&nbsp;optimized&nbsp;to&nbsp;contain&nbsp;only&nbsp;relevant&nbsp;buildings&nbsp;for<br>
+checking&nbsp;sight&nbsp;with&nbsp;the&nbsp;dudes.&nbsp;The&nbsp;screen&nbsp;is&nbsp;the&nbsp;surface&nbsp;used&nbsp;for&nbsp;drawing&nbsp;collision&nbsp;lines<br>
+if&nbsp;turned&nbsp;on.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>CHECK_SIGHT_INTERVAL</strong> = 30</dl>
+
+<dl><dt><strong>ITEM_CHANCE</strong> = 10</dl>
+
+<dl><dt><strong>MAX_POINTS</strong> = 10</dl>
+
+<dl><dt><strong>MAX_WANDER</strong> = 60</dl>
+
+<dl><dt><strong>alive</strong> = True</dl>
+
+<dl><dt><strong>check_sight</strong> = 0</dl>
+
+<dl><dt><strong>dead</strong> = None</dl>
+
+<dl><dt><strong>dead_direction</strong> = None</dl>
+
+<dl><dt><strong>dead_timer</strong> = 900</dl>
+
+<dl><dt><strong>target</strong> = None</dl>
+
+<dl><dt><strong>wander</strong> = 0</dl>
+
+<dl><dt><strong>wander_move</strong> = True</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="EnemyObject-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="EnemyObject-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="EnemyObject-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#EnemyObject-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="EnemyObject-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#EnemyObject-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#EnemyObject-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="EnemyObject-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GameObject">class <strong>GameObject</strong></a>(<a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Generic&nbsp;class&nbsp;for&nbsp;mostly&nbsp;moving&nbsp;game&nbsp;objects,&nbsp;handles&nbsp;collisions/movement/etc.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="GameObject-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initialize&nbsp;the&nbsp;pygame&nbsp;sprite&nbsp;class,&nbsp;this&nbsp;should&nbsp;be&nbsp;called&nbsp;by&nbsp;all&nbsp;inheritors.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="GameObject-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-update"><strong>update</strong></a>(self)</dt><dd><tt>Update&nbsp;function&nbsp;for&nbsp;all&nbsp;objects,&nbsp;currently&nbsp;does&nbsp;nothing&nbsp;but&nbsp;open&nbsp;for&nbsp;future.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="GameObject-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="GameObject-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#GameObject-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="GameObject-alive"><strong>alive</strong></a>(self)</dt><dd><tt><a href="#GameObject-alive">alive</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;to&nbsp;see&nbsp;if&nbsp;the&nbsp;sprite&nbsp;is&nbsp;in&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+Returns&nbsp;true&nbsp;if&nbsp;this&nbsp;sprite&nbsp;is&nbsp;a&nbsp;member&nbsp;of&nbsp;any&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#GameObject-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-kill"><strong>kill</strong></a>(self)</dt><dd><tt><a href="#GameObject-kill">kill</a>()<br>
+remove&nbsp;this&nbsp;sprite&nbsp;from&nbsp;all&nbsp;groups<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;sprite&nbsp;from&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain<br>
+it.&nbsp;The&nbsp;sprite&nbsp;still&nbsp;exists&nbsp;after&nbsp;calling&nbsp;this,<br>
+so&nbsp;you&nbsp;could&nbsp;use&nbsp;it&nbsp;to&nbsp;remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;all&nbsp;groups,<br>
+and&nbsp;then&nbsp;add&nbsp;it&nbsp;to&nbsp;some&nbsp;other&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#GameObject-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="GameObject-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GrenadeSprite">class <strong>GrenadeSprite</strong></a>(<a href="game_classes.html#GameObject">GameObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#Grenade&nbsp;CLASS<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#GrenadeSprite">GrenadeSprite</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="GrenadeSprite-__init__"><strong>__init__</strong></a>(self, position, dude, building_group)</dt><dd><tt>#METHODS</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;the&nbsp;kill&nbsp;method&nbsp;and&nbsp;explode&nbsp;instead.</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-update"><strong>update</strong></a>(self, grid, screen)</dt><dd><tt>Move,&nbsp;bounce&nbsp;off&nbsp;enemies,&nbsp;and&nbsp;eventually&nbsp;explode.&nbsp;The&nbsp;grid&nbsp;should&nbsp;represent&nbsp;the&nbsp;whole&nbsp;grid.<br>
+The&nbsp;screen&nbsp;is&nbsp;the&nbsp;surface&nbsp;used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_SPEED</strong> = 15</dl>
+
+<dl><dt><strong>MAX_STRENGTH</strong> = 100</dl>
+
+<dl><dt><strong>MAX_TIMEOUT</strong> = 60.0</dl>
+
+<dl><dt><strong>MAX_TURN_SPEED</strong> = 5</dl>
+
+<dl><dt><strong>SHOT_DELAY</strong> = 15</dl>
+
+<dl><dt><strong>direction</strong> = 0</dl>
+
+<dl><dt><strong>dude</strong> = None</dl>
+
+<dl><dt><strong>explode</strong> = None</dl>
+
+<dl><dt><strong>explode_timer</strong> = -1</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>speed</strong> = 0</dl>
+
+<dl><dt><strong>strength</strong> = 0</dl>
+
+<dl><dt><strong>target</strong> = None</dl>
+
+<dl><dt><strong>timeout</strong> = 0</dl>
+
+<dl><dt><strong>turn_speed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="GrenadeSprite-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="GrenadeSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="GrenadeSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#GrenadeSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="GrenadeSprite-alive"><strong>alive</strong></a>(self)</dt><dd><tt><a href="#GrenadeSprite-alive">alive</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;to&nbsp;see&nbsp;if&nbsp;the&nbsp;sprite&nbsp;is&nbsp;in&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+Returns&nbsp;true&nbsp;if&nbsp;this&nbsp;sprite&nbsp;is&nbsp;a&nbsp;member&nbsp;of&nbsp;any&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#GrenadeSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#GrenadeSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="GrenadeSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HomingSprite">class <strong>HomingSprite</strong></a>(<a href="game_classes.html#GameObject">GameObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;homing&nbsp;missile&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#HomingSprite">HomingSprite</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="HomingSprite-__init__"><strong>__init__</strong></a>(self, position, direction, enemy_group, building_group, cursor, dude)</dt><dd><tt>Constructor&nbsp;for&nbsp;bullets,&nbsp;must&nbsp;take&nbsp;a&nbsp;<a href="#HomingSprite-position">position</a>(of&nbsp;the&nbsp;dude),&nbsp;direction,&nbsp;enemy_group,<br>
+building_group,&nbsp;cursor&nbsp;for&nbsp;the&nbsp;dude&nbsp;who&nbsp;fired&nbsp;it,&nbsp;and&nbsp;the&nbsp;dude&nbsp;who&nbsp;fired&nbsp;it.&nbsp;The&nbsp;enemy_group<br>
+must&nbsp;contain&nbsp;all&nbsp;enemies&nbsp;near&nbsp;the&nbsp;cursor.&nbsp;The&nbsp;building_group&nbsp;must&nbsp;contain&nbsp;all&nbsp;buildings&nbsp;near<br>
+the&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;the&nbsp;kill&nbsp;method&nbsp;and&nbsp;explode&nbsp;instead.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-new_target"><strong>new_target</strong></a>(self, enemy_group, building_group)</dt><dd><tt>Find&nbsp;a&nbsp;new&nbsp;target&nbsp;from&nbsp;the&nbsp;enemy_group&nbsp;that&nbsp;you&nbsp;can&nbsp;see&nbsp;around&nbsp;all&nbsp;the&nbsp;buildings.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-start_position"><strong>start_position</strong></a>(self, position, direction)</dt><dd><tt>Set&nbsp;the&nbsp;correct&nbsp;start&nbsp;position&nbsp;from&nbsp;the&nbsp;one&nbsp;given.&nbsp;The&nbsp;position&nbsp;arg&nbsp;represents&nbsp;the&nbsp;dudes<br>
+position&nbsp;not&nbsp;where&nbsp;you&nbsp;actually&nbsp;want&nbsp;it&nbsp;to&nbsp;start,&nbsp;and&nbsp;this&nbsp;does&nbsp;the&nbsp;translation.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-update"><strong>update</strong></a>(self, grid, enemy_group, building_group, screen)</dt><dd><tt>Move&nbsp;the&nbsp;missile.&nbsp;The&nbsp;grid&nbsp;should&nbsp;be&nbsp;the&nbsp;entire&nbsp;grid.&nbsp;The&nbsp;enemy_group&nbsp;is&nbsp;used&nbsp;to&nbsp;find<br>
+targets&nbsp;and&nbsp;must&nbsp;hold&nbsp;all&nbsp;targets&nbsp;you&nbsp;wish&nbsp;to&nbsp;look&nbsp;for.&nbsp;The&nbsp;building_group&nbsp;shoud&nbsp;represent<br>
+all&nbsp;the&nbsp;buildings&nbsp;on&nbsp;the&nbsp;screen.&nbsp;The&nbsp;screen&nbsp;is&nbsp;the&nbsp;surface&nbsp;used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if<br>
+turned&nbsp;on.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_SPEED</strong> = 7</dl>
+
+<dl><dt><strong>MAX_STRENGTH</strong> = 50</dl>
+
+<dl><dt><strong>MAX_TIMEOUT</strong> = 150</dl>
+
+<dl><dt><strong>MAX_TURN_SPEED</strong> = 5</dl>
+
+<dl><dt><strong>SHOT_DELAY</strong> = 20</dl>
+
+<dl><dt><strong>dude</strong> = None</dl>
+
+<dl><dt><strong>explode</strong> = None</dl>
+
+<dl><dt><strong>explode_timer</strong> = -1</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>speed</strong> = 0</dl>
+
+<dl><dt><strong>strength</strong> = 0</dl>
+
+<dl><dt><strong>target</strong> = None</dl>
+
+<dl><dt><strong>timeout</strong> = 0</dl>
+
+<dl><dt><strong>turn_speed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="HomingSprite-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="HomingSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="HomingSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#HomingSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="HomingSprite-alive"><strong>alive</strong></a>(self)</dt><dd><tt><a href="#HomingSprite-alive">alive</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;to&nbsp;see&nbsp;if&nbsp;the&nbsp;sprite&nbsp;is&nbsp;in&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+Returns&nbsp;true&nbsp;if&nbsp;this&nbsp;sprite&nbsp;is&nbsp;a&nbsp;member&nbsp;of&nbsp;any&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#HomingSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#HomingSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="HomingSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ItemSprite">class <strong>ItemSprite</strong></a>(<a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;class&nbsp;for&nbsp;all&nbsp;items&nbsp;that&nbsp;are&nbsp;dropped&nbsp;by&nbsp;enemies&nbsp;and&nbsp;picked&nbsp;up&nbsp;by&nbsp;dudes.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#ItemSprite">ItemSprite</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ItemSprite-__init__"><strong>__init__</strong></a>(self, position, weapon<font color="#909090">=False</font>, MAX_AMMO<font color="#909090">=False</font>)</dt><dd><tt>Constructor&nbsp;for&nbsp;Items,&nbsp;takes&nbsp;a&nbsp;position&nbsp;at&nbsp;very&nbsp;least.&nbsp;If&nbsp;no&nbsp;<a href="#ItemSprite-weapon">weapon</a>(integer&nbsp;from&nbsp;1-5)&nbsp;is<br>
+specified&nbsp;then&nbsp;creates&nbsp;a&nbsp;healthpack.&nbsp;MAX_AMMO&nbsp;can&nbsp;also&nbsp;be&nbsp;specified&nbsp;otherwise&nbsp;uses&nbsp;default.</tt></dd></dl>
+
+<dl><dt><a name="ItemSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;group&nbsp;in&nbsp;all&nbsp;grid&nbsp;squares&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="ItemSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grid&nbsp;squares&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="ItemSprite-update"><strong>update</strong></a>(self, grid, screen)</dt><dd><tt>Check&nbsp;for&nbsp;collisions&nbsp;with&nbsp;dudes&nbsp;in&nbsp;my&nbsp;part&nbsp;fo&nbsp;the&nbsp;grid.&nbsp;The&nbsp;grid&nbsp;argument&nbsp;should&nbsp;be<br>
+the&nbsp;entire&nbsp;grid.&nbsp;The&nbsp;screen&nbsp;represents&nbsp;the&nbsp;surface&nbsp;to&nbsp;draw&nbsp;on,&nbsp;but&nbsp;will&nbsp;only&nbsp;be&nbsp;used&nbsp;to&nbsp;draw<br>
+collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_AMMO</strong> = [150, 150, 50, 25, 25]</dl>
+
+<dl><dt><strong>ammo</strong> = 0</dl>
+
+<dl><dt><strong>fade</strong> = 0</dl>
+
+<dl><dt><strong>fades</strong> = []</dl>
+
+<dl><dt><strong>health_pack</strong> = False</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>none</strong> = None</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>visible</strong> = None</dl>
+
+<dl><dt><strong>weapon</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="ItemSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ItemSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#ItemSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="ItemSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="ItemSprite-alive"><strong>alive</strong></a>(self)</dt><dd><tt><a href="#ItemSprite-alive">alive</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;to&nbsp;see&nbsp;if&nbsp;the&nbsp;sprite&nbsp;is&nbsp;in&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+Returns&nbsp;true&nbsp;if&nbsp;this&nbsp;sprite&nbsp;is&nbsp;a&nbsp;member&nbsp;of&nbsp;any&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="ItemSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#ItemSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="ItemSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt><a href="#ItemSprite-kill">kill</a>()<br>
+remove&nbsp;this&nbsp;sprite&nbsp;from&nbsp;all&nbsp;groups<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;sprite&nbsp;from&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain<br>
+it.&nbsp;The&nbsp;sprite&nbsp;still&nbsp;exists&nbsp;after&nbsp;calling&nbsp;this,<br>
+so&nbsp;you&nbsp;could&nbsp;use&nbsp;it&nbsp;to&nbsp;remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;all&nbsp;groups,<br>
+and&nbsp;then&nbsp;add&nbsp;it&nbsp;to&nbsp;some&nbsp;other&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="ItemSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#ItemSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="ItemSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Level">class <strong>Level</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;keeps&nbsp;track&nbsp;of&nbsp;a&nbsp;level&nbsp;by&nbsp;mainting&nbsp;a&nbsp;building_group&nbsp;and&nbsp;spawn_group&nbsp;which&nbsp;make<br>
+up&nbsp;the&nbsp;level&nbsp;itself.&nbsp;It&nbsp;also&nbsp;has&nbsp;highscores&nbsp;that&nbsp;it&nbsp;reads&nbsp;from&nbsp;a&nbsp;file&nbsp;called&nbsp;highscores.txt.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Level-__init__"><strong>__init__</strong></a>(self, building_list, spawn_list, level, dude_position)</dt><dd><tt>Initialize&nbsp;the&nbsp;level&nbsp;with&nbsp;a&nbsp;building&nbsp;list,&nbsp;spawn&nbsp;list,&nbsp;level&nbsp;#,&nbsp;and&nbsp;dude_position.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>building_group</strong> = None</dl>
+
+<dl><dt><strong>dude_position</strong> = None</dl>
+
+<dl><dt><strong>highest_wave</strong> = 0</dl>
+
+<dl><dt><strong>individual_highscore</strong> = 0</dl>
+
+<dl><dt><strong>level</strong> = None</dl>
+
+<dl><dt><strong>spawn_group</strong> = None</dl>
+
+<dl><dt><strong>team_highscore</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MineSprite">class <strong>MineSprite</strong></a>(<a href="game_classes.html#GameObject">GameObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;mine&nbsp;class,&nbsp;currently&nbsp;not&nbsp;in&nbsp;use(to&nbsp;cheap).<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#MineSprite">MineSprite</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="MineSprite-__init__"><strong>__init__</strong></a>(self, position, dude)</dt><dd><tt>Constructor&nbsp;for&nbsp;the&nbsp;mines,&nbsp;takes&nbsp;a&nbsp;position&nbsp;and&nbsp;a&nbsp;dude&nbsp;who&nbsp;dropped&nbsp;it.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;the&nbsp;kill&nbsp;method&nbsp;and&nbsp;explode&nbsp;instead.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-update"><strong>update</strong></a>(self, grid, screen)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;hit&nbsp;any&nbsp;enemies,&nbsp;the&nbsp;grid&nbsp;should&nbsp;represent&nbsp;the&nbsp;whole&nbsp;grid.&nbsp;The&nbsp;screen&nbsp;is&nbsp;the<br>
+surface&nbsp;used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_STRENGTH</strong> = 50</dl>
+
+<dl><dt><strong>SHOT_DELAY</strong> = 10</dl>
+
+<dl><dt><strong>dude</strong> = None</dl>
+
+<dl><dt><strong>explode</strong> = None</dl>
+
+<dl><dt><strong>explode_timer</strong> = -1</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>strength</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="MineSprite-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="MineSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MineSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#MineSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="MineSprite-alive"><strong>alive</strong></a>(self)</dt><dd><tt><a href="#MineSprite-alive">alive</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;to&nbsp;see&nbsp;if&nbsp;the&nbsp;sprite&nbsp;is&nbsp;in&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+Returns&nbsp;true&nbsp;if&nbsp;this&nbsp;sprite&nbsp;is&nbsp;a&nbsp;member&nbsp;of&nbsp;any&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#MineSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#MineSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="MineSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SpawnPoint">class <strong>SpawnPoint</strong></a>(<a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;for&nbsp;spawning&nbsp;enemies,&nbsp;may&nbsp;be&nbsp;placed&nbsp;anywhere&nbsp;but&nbsp;preferably&nbsp;in&nbsp;a&nbsp;building.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#SpawnPoint">SpawnPoint</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SpawnPoint-__init__"><strong>__init__</strong></a>(self, position, spawn_side, spawn_list<font color="#909090">=False</font>)</dt><dd><tt>Initalize&nbsp;a&nbsp;spawn&nbsp;point&nbsp;with&nbsp;at&nbsp;least&nbsp;a&nbsp;position&nbsp;and&nbsp;spawn&nbsp;side(the&nbsp;side&nbsp;the&nbsp;enemies&nbsp;spawn<br>
+from).&nbsp;Optional&nbsp;spawn&nbsp;list&nbsp;can&nbsp;change&nbsp;the&nbsp;probability&nbsp;of&nbsp;each&nbsp;type&nbsp;of&nbsp;enemy&nbsp;to&nbsp;spawn.</tt></dd></dl>
+
+<dl><dt><a name="SpawnPoint-close_door"><strong>close_door</strong></a>(self)</dt><dd><tt>Close&nbsp;the&nbsp;door.</tt></dd></dl>
+
+<dl><dt><a name="SpawnPoint-open_door"><strong>open_door</strong></a>(self)</dt><dd><tt>Open&nbsp;the&nbsp;door.</tt></dd></dl>
+
+<dl><dt><a name="SpawnPoint-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;can&nbsp;see&nbsp;a&nbsp;dude&nbsp;around&nbsp;the&nbsp;buildings.</tt></dd></dl>
+
+<dl><dt><a name="SpawnPoint-update"><strong>update</strong></a>(self, groups, wave)</dt><dd><tt>Decide&nbsp;whether&nbsp;or&nbsp;not&nbsp;to&nbsp;spawn&nbsp;enemies.&nbsp;"groups"&nbsp;variable&nbsp;should&nbsp;contain&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;all<br>
+groups&nbsp;which&nbsp;spawned&nbsp;enemies&nbsp;may&nbsp;collide&nbsp;with&nbsp;(and&nbsp;be&nbsp;instantly&nbsp;killed&nbsp;to&nbsp;avoid&nbsp;glitching).<br>
+This&nbsp;should&nbsp;include&nbsp;"enemy_group",&nbsp;"dude_group",&nbsp;and&nbsp;"building_group".&nbsp;The&nbsp;"wave"&nbsp;variable<br>
+indicates&nbsp;which&nbsp;wave&nbsp;we&nbsp;are&nbsp;on&nbsp;which&nbsp;dictates&nbsp;spawning&nbsp;speed&nbsp;of&nbsp;baddies.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;your&nbsp;center&nbsp;x.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;your&nbsp;center&nbsp;y.</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>CHECK_SIGHT_INTERVAL</strong> = 60</dl>
+
+<dl><dt><strong>MAX_OPEN_TIME</strong> = 60</dl>
+
+<dl><dt><strong>can_see</strong> = False</dl>
+
+<dl><dt><strong>check_sight</strong> = 0</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>open</strong> = None</dl>
+
+<dl><dt><strong>open_time</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = (0, 0, 0, 0)</dl>
+
+<dl><dt><strong>spawn_list</strong> = {'big_zombie': 25, 'dog': 15, 'uber_zombie': 1, 'zombie': 100}</dl>
+
+<dl><dt><strong>spawn_side</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="SpawnPoint-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SpawnPoint-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#SpawnPoint-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="SpawnPoint-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="SpawnPoint-alive"><strong>alive</strong></a>(self)</dt><dd><tt><a href="#SpawnPoint-alive">alive</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;to&nbsp;see&nbsp;if&nbsp;the&nbsp;sprite&nbsp;is&nbsp;in&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+Returns&nbsp;true&nbsp;if&nbsp;this&nbsp;sprite&nbsp;is&nbsp;a&nbsp;member&nbsp;of&nbsp;any&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="SpawnPoint-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#SpawnPoint-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="SpawnPoint-kill"><strong>kill</strong></a>(self)</dt><dd><tt><a href="#SpawnPoint-kill">kill</a>()<br>
+remove&nbsp;this&nbsp;sprite&nbsp;from&nbsp;all&nbsp;groups<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;sprite&nbsp;from&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain<br>
+it.&nbsp;The&nbsp;sprite&nbsp;still&nbsp;exists&nbsp;after&nbsp;calling&nbsp;this,<br>
+so&nbsp;you&nbsp;could&nbsp;use&nbsp;it&nbsp;to&nbsp;remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;all&nbsp;groups,<br>
+and&nbsp;then&nbsp;add&nbsp;it&nbsp;to&nbsp;some&nbsp;other&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="SpawnPoint-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#SpawnPoint-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="SpawnPoint-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UberZombieSprite">class <strong>UberZombieSprite</strong></a>(<a href="game_classes.html#EnemyObject">EnemyObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#Uber&nbsp;Zombie&nbsp;class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#UberZombieSprite">UberZombieSprite</a></dd>
+<dd><a href="game_classes.html#EnemyObject">EnemyObject</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="UberZombieSprite-__init__"><strong>__init__</strong></a>(self, position, groups, spawn<font color="#909090">=None</font>)</dt><dd><tt>Constructor&nbsp;for&nbsp;uberzombie,&nbsp;must&nbsp;have&nbsp;position&nbsp;and&nbsp;groups.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;contains&nbsp;the<br>
+groups&nbsp;that&nbsp;you&nbsp;care&nbsp;about&nbsp;colliding&nbsp;with&nbsp;when&nbsp;you&nbsp;spawn.&nbsp;If&nbsp;spawn&nbsp;is&nbsp;specified&nbsp;it&nbsp;will<br>
+spawn&nbsp;on&nbsp;the&nbsp;correct&nbsp;side&nbsp;of&nbsp;that&nbsp;spawn&nbsp;instead&nbsp;of&nbsp;the&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-update"><strong>update</strong></a>(self, grid, enemy_group, building_group, screen)</dt><dd><tt>Just&nbsp;call&nbsp;your&nbsp;parent&nbsp;update&nbsp;function,&nbsp;with&nbsp;same&nbsp;args.&nbsp;Then&nbsp;set&nbsp;your&nbsp;mask&nbsp;if<br>
+pixel_perfect&nbsp;is&nbsp;turned&nbsp;off&nbsp;since&nbsp;it&nbsp;is&nbsp;necessary&nbsp;for&nbsp;these&nbsp;large&nbsp;dudes.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_HEALTH</strong> = 500</dl>
+
+<dl><dt><strong>MAX_SPEED</strong> = 1.5</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>speed</strong> = 0.0</dl>
+
+<dl><dt><strong>strength</strong> = 5</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#EnemyObject">EnemyObject</a>:<br>
+<dl><dt><a name="UberZombieSprite-face_dude"><strong>face_dude</strong></a>(self, dude)</dt><dd><tt>Make&nbsp;the&nbsp;enemy&nbsp;face&nbsp;the&nbsp;dude!</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;the&nbsp;kill&nbsp;method&nbsp;so&nbsp;you&nbsp;turn&nbsp;into&nbsp;blood,&nbsp;then&nbsp;call&nbsp;it&nbsp;later&nbsp;in&nbsp;update.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-set_rect"><strong>set_rect</strong></a>(self)</dt><dd><tt>Set&nbsp;your&nbsp;rectangle&nbsp;based&nbsp;on&nbsp;your&nbsp;image.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-spawn_location"><strong>spawn_location</strong></a>(self, position, spawn<font color="#909090">=False</font>)</dt><dd><tt>Spawns&nbsp;you&nbsp;in&nbsp;the&nbsp;correct&nbsp;location,&nbsp;either&nbsp;a&nbsp;position&nbsp;or&nbsp;based&nbsp;on&nbsp;a&nbsp;spawn&nbsp;if&nbsp;specified.<br>
+This&nbsp;will&nbsp;spawn&nbsp;you&nbsp;on&nbsp;the&nbsp;correct&nbsp;side&nbsp;of&nbsp;the&nbsp;spawn&nbsp;based&nbsp;on&nbsp;its&nbsp;spawn&nbsp;side.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#EnemyObject">EnemyObject</a>:<br>
+<dl><dt><strong>CHECK_SIGHT_INTERVAL</strong> = 30</dl>
+
+<dl><dt><strong>ITEM_CHANCE</strong> = 10</dl>
+
+<dl><dt><strong>MAX_POINTS</strong> = 10</dl>
+
+<dl><dt><strong>MAX_WANDER</strong> = 60</dl>
+
+<dl><dt><strong>alive</strong> = True</dl>
+
+<dl><dt><strong>check_sight</strong> = 0</dl>
+
+<dl><dt><strong>dead</strong> = None</dl>
+
+<dl><dt><strong>dead_direction</strong> = None</dl>
+
+<dl><dt><strong>dead_timer</strong> = 900</dl>
+
+<dl><dt><strong>target</strong> = None</dl>
+
+<dl><dt><strong>wander</strong> = 0</dl>
+
+<dl><dt><strong>wander_move</strong> = True</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="UberZombieSprite-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="UberZombieSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UberZombieSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#UberZombieSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="UberZombieSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#UberZombieSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#UberZombieSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="UberZombieSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ZombieSprite">class <strong>ZombieSprite</strong></a>(<a href="game_classes.html#EnemyObject">EnemyObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;main&nbsp;simple&nbsp;Zombie.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="game_classes.html#ZombieSprite">ZombieSprite</a></dd>
+<dd><a href="game_classes.html#EnemyObject">EnemyObject</a></dd>
+<dd><a href="game_classes.html#GameObject">GameObject</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ZombieSprite-__init__"><strong>__init__</strong></a>(self, position, groups, spawn<font color="#909090">=False</font>)</dt><dd><tt>Constructor&nbsp;for&nbsp;zombie,&nbsp;must&nbsp;have&nbsp;position&nbsp;and&nbsp;groups.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;contains&nbsp;the<br>
+groups&nbsp;that&nbsp;you&nbsp;care&nbsp;about&nbsp;colliding&nbsp;with&nbsp;when&nbsp;you&nbsp;spawn.&nbsp;If&nbsp;spawn&nbsp;is&nbsp;specified&nbsp;it&nbsp;will<br>
+spawn&nbsp;on&nbsp;the&nbsp;correct&nbsp;side&nbsp;of&nbsp;that&nbsp;spawn&nbsp;instead&nbsp;of&nbsp;the&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-update"><strong>update</strong></a>(self, grid, enemy_group, building_group, screen)</dt><dd><tt>Just&nbsp;call&nbsp;your&nbsp;parent&nbsp;update&nbsp;function,&nbsp;with&nbsp;same&nbsp;args.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>MAX_HEALTH</strong> = 15</dl>
+
+<dl><dt><strong>MAX_SPEED</strong> = 1.5</dl>
+
+<dl><dt><strong>normal</strong> = None</dl>
+
+<dl><dt><strong>speed</strong> = 0.0</dl>
+
+<dl><dt><strong>strength</strong> = 1</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#EnemyObject">EnemyObject</a>:<br>
+<dl><dt><a name="ZombieSprite-face_dude"><strong>face_dude</strong></a>(self, dude)</dt><dd><tt>Make&nbsp;the&nbsp;enemy&nbsp;face&nbsp;the&nbsp;dude!</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>Override&nbsp;the&nbsp;kill&nbsp;method&nbsp;so&nbsp;you&nbsp;turn&nbsp;into&nbsp;blood,&nbsp;then&nbsp;call&nbsp;it&nbsp;later&nbsp;in&nbsp;update.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-set_rect"><strong>set_rect</strong></a>(self)</dt><dd><tt>Set&nbsp;your&nbsp;rectangle&nbsp;based&nbsp;on&nbsp;your&nbsp;image.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-spawn_location"><strong>spawn_location</strong></a>(self, position, spawn<font color="#909090">=False</font>)</dt><dd><tt>Spawns&nbsp;you&nbsp;in&nbsp;the&nbsp;correct&nbsp;location,&nbsp;either&nbsp;a&nbsp;position&nbsp;or&nbsp;based&nbsp;on&nbsp;a&nbsp;spawn&nbsp;if&nbsp;specified.<br>
+This&nbsp;will&nbsp;spawn&nbsp;you&nbsp;on&nbsp;the&nbsp;correct&nbsp;side&nbsp;of&nbsp;the&nbsp;spawn&nbsp;based&nbsp;on&nbsp;its&nbsp;spawn&nbsp;side.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#EnemyObject">EnemyObject</a>:<br>
+<dl><dt><strong>CHECK_SIGHT_INTERVAL</strong> = 30</dl>
+
+<dl><dt><strong>ITEM_CHANCE</strong> = 10</dl>
+
+<dl><dt><strong>MAX_POINTS</strong> = 10</dl>
+
+<dl><dt><strong>MAX_WANDER</strong> = 60</dl>
+
+<dl><dt><strong>alive</strong> = True</dl>
+
+<dl><dt><strong>check_sight</strong> = 0</dl>
+
+<dl><dt><strong>dead</strong> = None</dl>
+
+<dl><dt><strong>dead_direction</strong> = None</dl>
+
+<dl><dt><strong>dead_timer</strong> = 900</dl>
+
+<dl><dt><strong>target</strong> = None</dl>
+
+<dl><dt><strong>wander</strong> = 0</dl>
+
+<dl><dt><strong>wander_move</strong> = True</dl>
+
+<hr>
+Methods inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><a name="ZombieSprite-collide"><strong>collide</strong></a>(self, screen, groups, collide<font color="#909090">=''</font>, move_back<font color="#909090">=False</font>, dude<font color="#909090">=False</font>)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;collision&nbsp;with&nbsp;all&nbsp;sprites&nbsp;in&nbsp;groups&nbsp;(a&nbsp;list&nbsp;of&nbsp;groups).&nbsp;The&nbsp;collide&nbsp;argument<br>
+only&nbsp;does&nbsp;something&nbsp;if&nbsp;set&nbsp;to&nbsp;"kill",&nbsp;in&nbsp;which&nbsp;case&nbsp;it&nbsp;will&nbsp;do&nbsp;damage&nbsp;to&nbsp;anything&nbsp;it&nbsp;hits.<br>
+The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects&nbsp;you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the<br>
+bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).&nbsp;If&nbsp;dude&nbsp;is<br>
+specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-get_groups"><strong>get_groups</strong></a>(self, grid)</dt><dd><tt>Get&nbsp;the&nbsp;groups&nbsp;from&nbsp;the&nbsp;grid&nbsp;square&nbsp;I&nbsp;am&nbsp;in.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-hit"><strong>hit</strong></a>(self, strength, dude<font color="#909090">=False</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Do&nbsp;damage&nbsp;to&nbsp;yourself&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;strength&nbsp;argument.&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force<br>
+you&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move&nbsp;away&nbsp;from.&nbsp;If<br>
+dude&nbsp;is&nbsp;specified&nbsp;it&nbsp;will&nbsp;give&nbsp;points&nbsp;to&nbsp;that&nbsp;dude&nbsp;based&nbsp;on&nbsp;how&nbsp;much&nbsp;damage&nbsp;it&nbsp;did.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-move"><strong>move</strong></a>(self, screen, groups<font color="#909090">=False</font>, collide<font color="#909090">='ignore'</font>, move_back<font color="#909090">=False</font>)</dt><dd><tt>Move&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;based&nbsp;on&nbsp;xspeed&nbsp;and&nbsp;yspeed.&nbsp;Only&nbsp;necessary&nbsp;argument&nbsp;is&nbsp;screen,&nbsp;which&nbsp;is&nbsp;only<br>
+used&nbsp;to&nbsp;draw&nbsp;collision&nbsp;lines&nbsp;if&nbsp;turned&nbsp;on.&nbsp;The&nbsp;groups&nbsp;argument&nbsp;is&nbsp;the&nbsp;groups&nbsp;you&nbsp;want&nbsp;to<br>
+collide&nbsp;with.&nbsp;The&nbsp;collide&nbsp;argument&nbsp;tells&nbsp;it&nbsp;which&nbsp;type&nbsp;of&nbsp;collisions&nbsp;you&nbsp;want&nbsp;to&nbsp;do,&nbsp;may&nbsp;be<br>
+"kill",&nbsp;"suicide",&nbsp;"avoid",&nbsp;"ignore",&nbsp;or&nbsp;"bounce".&nbsp;The&nbsp;move_back&nbsp;argument&nbsp;will&nbsp;force&nbsp;objects<br>
+you&nbsp;collide&nbsp;with&nbsp;backwards&nbsp;(for&nbsp;explosions&nbsp;and&nbsp;the&nbsp;bat),&nbsp;it&nbsp;contains&nbsp;the&nbsp;position&nbsp;to&nbsp;move<br>
+away&nbsp;from&nbsp;(usually&nbsp;your&nbsp;position).</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-remove_grid"><strong>remove_grid</strong></a>(self, grid, group)</dt><dd><tt>Remove&nbsp;me&nbsp;from&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-see_dude"><strong>see_dude</strong></a>(self, dude, building_group)</dt><dd><tt>Check&nbsp;if&nbsp;you&nbsp;have&nbsp;line&nbsp;of&nbsp;sight&nbsp;on&nbsp;a&nbsp;dude.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-set_grid"><strong>set_grid</strong></a>(self, grid, group)</dt><dd><tt>Put&nbsp;me&nbsp;into&nbsp;the&nbsp;group&nbsp;in&nbsp;the&nbsp;grids&nbsp;around&nbsp;me.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;x&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>Property&nbsp;returning&nbsp;center&nbsp;y&nbsp;position.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="game_classes.html#GameObject">GameObject</a>:<br>
+<dl><dt><strong>health</strong> = 0</dl>
+
+<dl><dt><strong>mask</strong> = False</dl>
+
+<dl><dt><strong>move_back</strong> = False</dl>
+
+<dl><dt><strong>points</strong> = 0</dl>
+
+<dl><dt><strong>position</strong> = (0, 0)</dl>
+
+<dl><dt><strong>rect</strong> = &lt;rect(0, 0, 0, 0)&gt;</dl>
+
+<dl><dt><strong>xspeed</strong> = 0</dl>
+
+<dl><dt><strong>yspeed</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="ZombieSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ZombieSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt><a href="#ZombieSprite-add">add</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;of&nbsp;groups,&nbsp;...)<br>
+add&nbsp;a&nbsp;sprite&nbsp;to&nbsp;container<br>
+&nbsp;<br>
+Add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="ZombieSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt><a href="#ZombieSprite-groups">groups</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;groups<br>
+list&nbsp;used&nbsp;sprite&nbsp;containers<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;groups&nbsp;that&nbsp;contain&nbsp;this<br>
+sprite.&nbsp;These&nbsp;are&nbsp;not&nbsp;returned&nbsp;in&nbsp;any&nbsp;meaningful&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt><a href="#ZombieSprite-remove">remove</a>(group&nbsp;or&nbsp;list&nbsp;of&nbsp;groups,&nbsp;...)<br>
+remove&nbsp;a&nbsp;sprite&nbsp;from&nbsp;container<br>
+&nbsp;<br>
+Remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;or&nbsp;sequence&nbsp;of&nbsp;groups.</tt></dd></dl>
+
+<dl><dt><a name="ZombieSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>ACTIVEEVENT</strong> = 1<br>
+<strong>ANYFORMAT</strong> = 268435456<br>
+<strong>ASYNCBLIT</strong> = 4<br>
+<strong>AUDIO_S16</strong> = 32784<br>
+<strong>AUDIO_S16LSB</strong> = 32784<br>
+<strong>AUDIO_S16MSB</strong> = 36880<br>
+<strong>AUDIO_S16SYS</strong> = 32784<br>
+<strong>AUDIO_S8</strong> = 32776<br>
+<strong>AUDIO_U16</strong> = 16<br>
+<strong>AUDIO_U16LSB</strong> = 16<br>
+<strong>AUDIO_U16MSB</strong> = 4112<br>
+<strong>AUDIO_U16SYS</strong> = 16<br>
+<strong>AUDIO_U8</strong> = 8<br>
+<strong>DOUBLEBUF</strong> = 1073741824<br>
+<strong>Enemy_sight</strong> = False<br>
+<strong>FRAMES_PER_SECOND</strong> = 30<br>
+<strong>FULLSCREEN</strong> = -2147483648<br>
+<strong>GAME_HEIGHT</strong> = 750<br>
+<strong>GAME_WIDTH</strong> = 900<br>
+<strong>GL_ACCUM_ALPHA_SIZE</strong> = 11<br>
+<strong>GL_ACCUM_BLUE_SIZE</strong> = 10<br>
+<strong>GL_ACCUM_GREEN_SIZE</strong> = 9<br>
+<strong>GL_ACCUM_RED_SIZE</strong> = 8<br>
+<strong>GL_ALPHA_SIZE</strong> = 3<br>
+<strong>GL_BLUE_SIZE</strong> = 2<br>
+<strong>GL_BUFFER_SIZE</strong> = 4<br>
+<strong>GL_DEPTH_SIZE</strong> = 6<br>
+<strong>GL_DOUBLEBUFFER</strong> = 5<br>
+<strong>GL_GREEN_SIZE</strong> = 1<br>
+<strong>GL_MULTISAMPLEBUFFERS</strong> = 13<br>
+<strong>GL_MULTISAMPLESAMPLES</strong> = 14<br>
+<strong>GL_RED_SIZE</strong> = 0<br>
+<strong>GL_STENCIL_SIZE</strong> = 7<br>
+<strong>GL_STEREO</strong> = 12<br>
+<strong>HAT_CENTERED</strong> = 0<br>
+<strong>HAT_DOWN</strong> = 4<br>
+<strong>HAT_LEFT</strong> = 8<br>
+<strong>HAT_LEFTDOWN</strong> = 12<br>
+<strong>HAT_LEFTUP</strong> = 9<br>
+<strong>HAT_RIGHT</strong> = 2<br>
+<strong>HAT_RIGHTDOWN</strong> = 6<br>
+<strong>HAT_RIGHTUP</strong> = 3<br>
+<strong>HAT_UP</strong> = 1<br>
+<strong>HWACCEL</strong> = 256<br>
+<strong>HWPALETTE</strong> = 536870912<br>
+<strong>HWSURFACE</strong> = 1<br>
+<strong>IYUV_OVERLAY</strong> = 1448433993<br>
+<strong>JOYAXISMOTION</strong> = 7<br>
+<strong>JOYBALLMOTION</strong> = 8<br>
+<strong>JOYBUTTONDOWN</strong> = 10<br>
+<strong>JOYBUTTONUP</strong> = 11<br>
+<strong>JOYHATMOTION</strong> = 9<br>
+<strong>KEYDOWN</strong> = 2<br>
+<strong>KEYUP</strong> = 3<br>
+<strong>KMOD_ALT</strong> = 768<br>
+<strong>KMOD_CAPS</strong> = 8192<br>
+<strong>KMOD_CTRL</strong> = 192<br>
+<strong>KMOD_LALT</strong> = 256<br>
+<strong>KMOD_LCTRL</strong> = 64<br>
+<strong>KMOD_LMETA</strong> = 1024<br>
+<strong>KMOD_LSHIFT</strong> = 1<br>
+<strong>KMOD_META</strong> = 3072<br>
+<strong>KMOD_MODE</strong> = 16384<br>
+<strong>KMOD_NONE</strong> = 0<br>
+<strong>KMOD_NUM</strong> = 4096<br>
+<strong>KMOD_RALT</strong> = 512<br>
+<strong>KMOD_RCTRL</strong> = 128<br>
+<strong>KMOD_RMETA</strong> = 2048<br>
+<strong>KMOD_RSHIFT</strong> = 2<br>
+<strong>KMOD_SHIFT</strong> = 3<br>
+<strong>K_0</strong> = 48<br>
+<strong>K_1</strong> = 49<br>
+<strong>K_2</strong> = 50<br>
+<strong>K_3</strong> = 51<br>
+<strong>K_4</strong> = 52<br>
+<strong>K_5</strong> = 53<br>
+<strong>K_6</strong> = 54<br>
+<strong>K_7</strong> = 55<br>
+<strong>K_8</strong> = 56<br>
+<strong>K_9</strong> = 57<br>
+<strong>K_AMPERSAND</strong> = 38<br>
+<strong>K_ASTERISK</strong> = 42<br>
+<strong>K_AT</strong> = 64<br>
+<strong>K_BACKQUOTE</strong> = 96<br>
+<strong>K_BACKSLASH</strong> = 92<br>
+<strong>K_BACKSPACE</strong> = 8<br>
+<strong>K_BREAK</strong> = 318<br>
+<strong>K_CAPSLOCK</strong> = 301<br>
+<strong>K_CARET</strong> = 94<br>
+<strong>K_CLEAR</strong> = 12<br>
+<strong>K_COLON</strong> = 58<br>
+<strong>K_COMMA</strong> = 44<br>
+<strong>K_DELETE</strong> = 127<br>
+<strong>K_DOLLAR</strong> = 36<br>
+<strong>K_DOWN</strong> = 274<br>
+<strong>K_END</strong> = 279<br>
+<strong>K_EQUALS</strong> = 61<br>
+<strong>K_ESCAPE</strong> = 27<br>
+<strong>K_EURO</strong> = 321<br>
+<strong>K_EXCLAIM</strong> = 33<br>
+<strong>K_F1</strong> = 282<br>
+<strong>K_F10</strong> = 291<br>
+<strong>K_F11</strong> = 292<br>
+<strong>K_F12</strong> = 293<br>
+<strong>K_F13</strong> = 294<br>
+<strong>K_F14</strong> = 295<br>
+<strong>K_F15</strong> = 296<br>
+<strong>K_F2</strong> = 283<br>
+<strong>K_F3</strong> = 284<br>
+<strong>K_F4</strong> = 285<br>
+<strong>K_F5</strong> = 286<br>
+<strong>K_F6</strong> = 287<br>
+<strong>K_F7</strong> = 288<br>
+<strong>K_F8</strong> = 289<br>
+<strong>K_F9</strong> = 290<br>
+<strong>K_FIRST</strong> = 0<br>
+<strong>K_GREATER</strong> = 62<br>
+<strong>K_HASH</strong> = 35<br>
+<strong>K_HELP</strong> = 315<br>
+<strong>K_HOME</strong> = 278<br>
+<strong>K_INSERT</strong> = 277<br>
+<strong>K_KP0</strong> = 256<br>
+<strong>K_KP1</strong> = 257<br>
+<strong>K_KP2</strong> = 258<br>
+<strong>K_KP3</strong> = 259<br>
+<strong>K_KP4</strong> = 260<br>
+<strong>K_KP5</strong> = 261<br>
+<strong>K_KP6</strong> = 262<br>
+<strong>K_KP7</strong> = 263<br>
+<strong>K_KP8</strong> = 264<br>
+<strong>K_KP9</strong> = 265<br>
+<strong>K_KP_DIVIDE</strong> = 267<br>
+<strong>K_KP_ENTER</strong> = 271<br>
+<strong>K_KP_EQUALS</strong> = 272<br>
+<strong>K_KP_MINUS</strong> = 269<br>
+<strong>K_KP_MULTIPLY</strong> = 268<br>
+<strong>K_KP_PERIOD</strong> = 266<br>
+<strong>K_KP_PLUS</strong> = 270<br>
+<strong>K_LALT</strong> = 308<br>
+<strong>K_LAST</strong> = 323<br>
+<strong>K_LCTRL</strong> = 306<br>
+<strong>K_LEFT</strong> = 276<br>
+<strong>K_LEFTBRACKET</strong> = 91<br>
+<strong>K_LEFTPAREN</strong> = 40<br>
+<strong>K_LESS</strong> = 60<br>
+<strong>K_LMETA</strong> = 310<br>
+<strong>K_LSHIFT</strong> = 304<br>
+<strong>K_LSUPER</strong> = 311<br>
+<strong>K_MENU</strong> = 319<br>
+<strong>K_MINUS</strong> = 45<br>
+<strong>K_MODE</strong> = 313<br>
+<strong>K_NUMLOCK</strong> = 300<br>
+<strong>K_PAGEDOWN</strong> = 281<br>
+<strong>K_PAGEUP</strong> = 280<br>
+<strong>K_PAUSE</strong> = 19<br>
+<strong>K_PERIOD</strong> = 46<br>
+<strong>K_PLUS</strong> = 43<br>
+<strong>K_POWER</strong> = 320<br>
+<strong>K_PRINT</strong> = 316<br>
+<strong>K_QUESTION</strong> = 63<br>
+<strong>K_QUOTE</strong> = 39<br>
+<strong>K_QUOTEDBL</strong> = 34<br>
+<strong>K_RALT</strong> = 307<br>
+<strong>K_RCTRL</strong> = 305<br>
+<strong>K_RETURN</strong> = 13<br>
+<strong>K_RIGHT</strong> = 275<br>
+<strong>K_RIGHTBRACKET</strong> = 93<br>
+<strong>K_RIGHTPAREN</strong> = 41<br>
+<strong>K_RMETA</strong> = 309<br>
+<strong>K_RSHIFT</strong> = 303<br>
+<strong>K_RSUPER</strong> = 312<br>
+<strong>K_SCROLLOCK</strong> = 302<br>
+<strong>K_SEMICOLON</strong> = 59<br>
+<strong>K_SLASH</strong> = 47<br>
+<strong>K_SPACE</strong> = 32<br>
+<strong>K_SYSREQ</strong> = 317<br>
+<strong>K_TAB</strong> = 9<br>
+<strong>K_UNDERSCORE</strong> = 95<br>
+<strong>K_UNKNOWN</strong> = 0<br>
+<strong>K_UP</strong> = 273<br>
+<strong>K_a</strong> = 97<br>
+<strong>K_b</strong> = 98<br>
+<strong>K_c</strong> = 99<br>
+<strong>K_d</strong> = 100<br>
+<strong>K_e</strong> = 101<br>
+<strong>K_f</strong> = 102<br>
+<strong>K_g</strong> = 103<br>
+<strong>K_h</strong> = 104<br>
+<strong>K_i</strong> = 105<br>
+<strong>K_j</strong> = 106<br>
+<strong>K_k</strong> = 107<br>
+<strong>K_l</strong> = 108<br>
+<strong>K_m</strong> = 109<br>
+<strong>K_n</strong> = 110<br>
+<strong>K_o</strong> = 111<br>
+<strong>K_p</strong> = 112<br>
+<strong>K_q</strong> = 113<br>
+<strong>K_r</strong> = 114<br>
+<strong>K_s</strong> = 115<br>
+<strong>K_t</strong> = 116<br>
+<strong>K_u</strong> = 117<br>
+<strong>K_v</strong> = 118<br>
+<strong>K_w</strong> = 119<br>
+<strong>K_x</strong> = 120<br>
+<strong>K_y</strong> = 121<br>
+<strong>K_z</strong> = 122<br>
+<strong>MOUSEBUTTONDOWN</strong> = 5<br>
+<strong>MOUSEBUTTONUP</strong> = 6<br>
+<strong>MOUSEMOTION</strong> = 4<br>
+<strong>NOEVENT</strong> = 0<br>
+<strong>NOFRAME</strong> = 32<br>
+<strong>NUMEVENTS</strong> = 32<br>
+<strong>NUM_BLOOD_STAINS</strong> = 500<br>
+<strong>OPENGL</strong> = 2<br>
+<strong>OPENGLBLIT</strong> = 10<br>
+<strong>PREALLOC</strong> = 16777216<br>
+<strong>QUIT</strong> = 12<br>
+<strong>RESIZABLE</strong> = 16<br>
+<strong>REST_LENGTH</strong> = 450<br>
+<strong>RLEACCEL</strong> = 16384<br>
+<strong>RLEACCELOK</strong> = 8192<br>
+<strong>SCREEN_HEIGHT</strong> = 750<br>
+<strong>SCREEN_WIDTH</strong> = 1255<br>
+<strong>SRCALPHA</strong> = 65536<br>
+<strong>SRCCOLORKEY</strong> = 4096<br>
+<strong>SWSURFACE</strong> = 0<br>
+<strong>SYSWMEVENT</strong> = 13<br>
+<strong>TIMER_RESOLUTION</strong> = 10<br>
+<strong>USEREVENT</strong> = 24<br>
+<strong>UYVY_OVERLAY</strong> = 1498831189<br>
+<strong>VIDEOEXPOSE</strong> = 17<br>
+<strong>VIDEORESIZE</strong> = 16<br>
+<strong>WAVE_LENGTH</strong> = 1350<br>
+<strong>YUY2_OVERLAY</strong> = 844715353<br>
+<strong>YV12_OVERLAY</strong> = 842094169<br>
+<strong>YVYU_OVERLAY</strong> = 1431918169<br>
+<strong>dirty_rects</strong> = []<br>
+<strong>display_grid</strong> = False<br>
+<strong>display_grid_numbers</strong> = False<br>
+<strong>draw_collision_lines</strong> = False<br>
+<strong>dude_dude_collisions</strong> = False<br>
+<strong>enemy_enemy_collisions</strong> = False<br>
+<strong>granularity</strong> = 15<br>
+<strong>grid</strong> = []<br>
+<strong>mouse_down</strong> = False<br>
+<strong>paused</strong> = False<br>
+<strong>pixel_perfect</strong> = True<br>
+<strong>tripping_on_acid</strong> = False</td></tr></table>
+</body></html>
