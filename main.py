@@ -140,6 +140,7 @@ def main():
     rect = screen.get_rect()
     dude = DudeSprite(rect.center)
     dude_group = pygame.sprite.RenderUpdates(dude)
+    health_bar_group = pygame.sprite.RenderUpdates()
     enemy_group = pygame.sprite.RenderUpdates()
     bullet_group = pygame.sprite.RenderUpdates()
     homing_group = pygame.sprite.RenderUpdates()
@@ -162,6 +163,8 @@ def main():
     c.position = dude.position
     c.rect.center = c.position
     cursor_group.add(c)
+    h = HealthBarSprite(dude, 20, 3, -18)
+    health_bar_group.add(h)
     for x in range(1, num_joysticks):
         dude = DudeSprite((dude.x - 40,dude.y), x)
         dude_group.add(dude)
@@ -169,6 +172,8 @@ def main():
         c.position = dude.position
         c.rect.center = c.position
         cursor_group.add(c)
+        h = HealthBarSprite(dude, 20, 3, -18)
+        health_bar_group.add(h)
 
     #Initialize the grid
     grid = [[{"enemy_group":pygame.sprite.Group(),
@@ -683,6 +688,10 @@ def main():
             dude_group.update(num_joysticks, grid, cursor_group, screen)
             dirty_rects.extend(dude_group.draw(screen))
 
+            #HEALTH BARS
+            health_bar_group.update()
+            dirty_rects.extend(health_bar_group.draw(screen))
+
             #ENEMIES
             #enemy_group.update({"building_group":building_group,
             #                    "dude_group":dude_group,
@@ -696,7 +705,8 @@ def main():
             if wave_timer > REST_LENGTH:
                 spawn_group.update({"enemy_group":enemy_group,
                                     "dude_group":dude_group,
-                                    "building_group":building_group}, current_wave)
+                                    "building_group":building_group,
+                                    "health_bar_group":health_bar_group}, current_wave)
             dirty_rects.extend(spawn_group.draw(screen))
             #CURSORS
             cursor_group.update(num_joysticks, screen)
@@ -714,6 +724,9 @@ def main():
                 if enemy.alive == False:
                     enemy_group.remove(enemy)
                     blood_stain_group.add(enemy)
+                    if hasattr(enemy, "healthBar"):
+                        health_bar_group.remove(enemy.healthBar)
+                        enemy.healthBar = None
                     #Create a random item maybe?
                     if random.randint(0,100) <= enemy.ITEM_CHANCE:
                         if random.randint(0,5) >= 1:

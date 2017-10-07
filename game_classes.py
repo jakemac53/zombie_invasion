@@ -173,6 +173,9 @@ class SpawnPoint(pygame.sprite.Sprite):
                 if random.randint(0,100000) < self.spawn_list["uber_zombie"]*(1.1**(wave-1)):
                     uberzombie = UberZombieSprite(self.position, collision_groups, self)
                     groups["enemy_group"].add(uberzombie)
+                    healthBar = HealthBarSprite(uberzombie, 100, 3, -30)
+                    groups["health_bar_group"].add(healthBar)
+                    uberzombie.healthBar = healthBar
                     self.open_door()
 
     def open_door(self):
@@ -325,6 +328,45 @@ class ItemSprite(pygame.sprite.Sprite):
              for y2 in range(y-1, y+2):
                  if x2 > -1 and x2 < granularity and y2 > -1 and y2 < granularity:
                      grid[x2][y2][group].remove(self)
+
+    @property
+    def x(self):
+        """ Property returning center x position. """
+        return self.position[0]
+    @property
+    def y(self):
+        """ Property returning center y position. """
+        return self.position[1]
+
+#HealthBarSprite Class
+class HealthBarSprite(pygame.sprite.Sprite):
+    """ The class for all healthbars for a target. """
+    target = None
+    rect = pygame.Rect(0,0,0,0)
+    mask = False
+    # Need to be hardcoded, target rects change in size based on rotation
+    height = None
+    width = None
+    yoffset = None
+
+    def __init__(self, target, width, height, yoffset):
+        """ Constructor for healthbars, takes a target. """
+        pygame.sprite.Sprite.__init__(self)
+        self.target = target
+        self.width = width
+        self.height = height
+        self.yoffset = yoffset
+
+
+    def update(self):
+        """ Follow the target! """
+        self.position = (self.target.x, self.target.y + self.yoffset)
+        self.rect = Rect(self.x - math.floor(self.width / 2), self.y, self.width, self.height)
+        self.image = pygame.Surface((self.rect.width, self.rect.height))
+        self.image.fill(color.Color("red"))
+        greenRect = self.image.get_rect()
+        greenRect.width = math.floor((self.target.health/self.target.MAX_HEALTH) * self.rect.width)
+        self.image.fill(color.Color("green"), rect=greenRect)
 
     @property
     def x(self):
@@ -1237,6 +1279,8 @@ class UberZombieSprite(EnemyObject):
     #IMAGES
     normal = None
     strength = 5
+    #Must set manually after creation
+    healthBar = None
 
     #METHODS
     def __init__(self, position, groups, spawn = None):
