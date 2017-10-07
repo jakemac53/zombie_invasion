@@ -255,7 +255,7 @@ class ItemSprite(pygame.sprite.Sprite):
             self.weapon = weapon
             if MAX_AMMO:
                 self.MAX_AMMO[weapon] = MAX_AMMO
-            self.ammo = random.randint(self.MAX_AMMO[weapon-1]/2, self.MAX_AMMO[weapon-1])
+            self.ammo = random.randint(math.floor(self.MAX_AMMO[weapon-1]/2), math.floor(self.MAX_AMMO[weapon-1]))
             mystring = "weapon%d.gif" % (self.weapon)
             self.normal = pygame.image.load(os.path.join('images', mystring)).convert()
         self.none = pygame.image.load(os.path.join('images', "none.gif")).convert()
@@ -263,7 +263,7 @@ class ItemSprite(pygame.sprite.Sprite):
         self.none.set_colorkey((255,153,255))
         self.image = self.normal
         self.rect = self.image.get_rect(center = self.position)
-        self.fades = [90/x for x in xrange(1,21)]
+        self.fades = [90/x for x in range(1,21)]
         self.fade = self.fades.pop(0)
         self.visible = True
 
@@ -311,8 +311,8 @@ class ItemSprite(pygame.sprite.Sprite):
          """ Put me into the group in the grid squares around me. """
          x = int(math.floor(self.x/(GAME_WIDTH/granularity)))
          y = int(math.floor(self.y/(GAME_HEIGHT/granularity)))
-         for x2 in xrange(x-1, x+2):
-             for y2 in xrange(y-1, y+2):
+         for x2 in range(x-1, x+2):
+             for y2 in range(y-1, y+2):
                  if x2 > -1 and x2 < granularity and y2 > -1 and y2 < granularity:
                      grid[x2][y2][group].add(self)
 
@@ -321,8 +321,8 @@ class ItemSprite(pygame.sprite.Sprite):
          """ Remove me from group in all grid squares around me. """
          x = int(math.floor(self.x/(GAME_WIDTH/granularity)))
          y = int(math.floor(self.y/(GAME_HEIGHT/granularity)))
-         for x2 in xrange(x-1, x+2):
-             for y2 in xrange(y-1, y+2):
+         for x2 in range(x-1, x+2):
+             for y2 in range(y-1, y+2):
                  if x2 > -1 and x2 < granularity and y2 > -1 and y2 < granularity:
                      grid[x2][y2][group].remove(self)
 
@@ -531,8 +531,8 @@ class GameObject(pygame.sprite.Sprite):
          """ Put me into the group in the grids around me. """
          x = int(math.floor(self.x/(GAME_WIDTH/granularity)))
          y = int(math.floor(self.y/(GAME_HEIGHT/granularity)))
-         for x2 in xrange(x-1, x+2):
-             for y2 in xrange(y-1, y+2):
+         for x2 in range(x-1, x+2):
+             for y2 in range(y-1, y+2):
                  if x2 > -1 and x2 < granularity and y2 > -1 and y2 < granularity:
                      grid[x2][y2][group].add(self)
 
@@ -541,8 +541,8 @@ class GameObject(pygame.sprite.Sprite):
          """ Remove me from the group in the grids around me. """
          x = int(math.floor(self.x/(GAME_WIDTH/granularity)))
          y = int(math.floor(self.y/(GAME_HEIGHT/granularity)))
-         for x2 in xrange(x-1, x+2):
-             for y2 in xrange(y-1, y+2):
+         for x2 in range(x-1, x+2):
+             for y2 in range(y-1, y+2):
                  if x2 > -1 and x2 < granularity and y2 > -1 and y2 < granularity:
                      grid[x2][y2][group].remove(self)
 
@@ -707,8 +707,8 @@ class DudeSprite(GameObject):
         self.speed = self.spin = self.direction = self.health_packs = self.points = 0
         self.set_rect()
         self.weapon = 1
-        self.weapons = [False for x in xrange(0,10)]
-        self.ammo = [0 for x in xrange(0,10)]
+        self.weapons = [False for x in range(0,10)]
+        self.ammo = [0 for x in range(0,10)]
         self.weapons[1] = True
         self.ammo[1] = 250
         self.health = self.MAX_HEALTH

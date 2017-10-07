@@ -36,12 +36,12 @@ def load_levels():
 
     xinterval = GAME_WIDTH/3
     yinterval = GAME_HEIGHT/3
-    for x in xrange(xinterval/2,GAME_WIDTH,xinterval):
+    for x in range(math.floor(xinterval/2),GAME_WIDTH,math.floor(xinterval)):
         y = 0
         spawns.append(SpawnPoint((x,y), "bottom"))
         y = GAME_HEIGHT
         spawns.append(SpawnPoint((x,y), "top"))
-    for y in xrange(yinterval/2,GAME_HEIGHT,yinterval):
+    for y in range(math.floor(yinterval/2),GAME_HEIGHT,math.floor(yinterval)):
         x = 0
         spawns.append(SpawnPoint((x,y), "right"))
         x = GAME_WIDTH
@@ -67,12 +67,12 @@ def load_levels():
 
     xinterval = GAME_WIDTH/3
     yinterval = GAME_HEIGHT/3
-    for x in xrange(xinterval/2,GAME_WIDTH,xinterval):
+    for x in range(math.floor(xinterval/2),GAME_WIDTH,math.floor(xinterval)):
         y = 0
         spawns.append(SpawnPoint((x,y), "bottom"))
         y = GAME_HEIGHT
         spawns.append(SpawnPoint((x,y), "top"))
-    for y in xrange(yinterval/2,GAME_HEIGHT,yinterval):
+    for y in range(math.floor(yinterval/2),GAME_HEIGHT,math.floor(yinterval)):
         x = 0
         spawns.append(SpawnPoint((x,y), "right"))
         x = GAME_WIDTH
@@ -104,12 +104,12 @@ def load_levels():
 
     xinterval = GAME_WIDTH/3
     yinterval = GAME_HEIGHT/3
-    for x in xrange(xinterval/2,GAME_WIDTH,xinterval):
+    for x in range(math.floor(xinterval/2),GAME_WIDTH,math.floor(xinterval)):
         y = 0
         spawns.append(SpawnPoint((x,y), "bottom"))
         y = GAME_HEIGHT
         spawns.append(SpawnPoint((x,y), "top"))
-    for y in xrange(yinterval/2,GAME_HEIGHT,yinterval):
+    for y in range(math.floor(yinterval/2),GAME_HEIGHT,math.floor(yinterval)):
         x = 0
         spawns.append(SpawnPoint((x,y), "right"))
         x = GAME_WIDTH
@@ -120,8 +120,8 @@ def load_levels():
     buildings = []
     buildings.extend([  BuildingSprite(pygame.Rect(GAME_WIDTH*x/7,GAME_HEIGHT*y/7,
                                                         GAME_WIDTH/7, GAME_HEIGHT/7))
-                                                        for x in xrange(1,6,2)
-                                                        for y in xrange(1,6,2)])
+                                                        for x in range(1,6,2)
+                                                        for y in range(1,6,2)])
     spawns = []
     for building in buildings:
         spawns.extend([SpawnPoint((building.rect.centerx,building.rect.top + 10), "top"),
@@ -137,12 +137,12 @@ def load_levels():
 
     xinterval = GAME_WIDTH/3
     yinterval = GAME_HEIGHT/3
-    for x in xrange(xinterval/2,GAME_WIDTH,xinterval):
+    for x in range(math.floor(xinterval/2),GAME_WIDTH,math.floor(xinterval)):
         y = 0
         spawns.append(SpawnPoint((x,y), "bottom"))
         y = GAME_HEIGHT
         spawns.append(SpawnPoint((x,y), "top"))
-    for y in xrange(yinterval/2,GAME_HEIGHT,yinterval):
+    for y in range(math.floor(yinterval/2),GAME_HEIGHT,math.floor(yinterval)):
         x = 0
         spawns.append(SpawnPoint((x,y), "right"))
         x = GAME_WIDTH
@@ -160,20 +160,20 @@ def load_level(level, levels, dude_group, grid):
     spawn_group = levels[level].spawn_group
 
     #set the buildings on the grid
-    for x in xrange(granularity):
-        for y in xrange(granularity):
+    for x in range(granularity):
+        for y in range(granularity):
             #clear the group
             grid[x][y]["building_group"].empty()
-    for x in xrange(granularity):
-        for y in xrange(granularity):
+    for x in range(granularity):
+        for y in range(granularity):
             #add any buildings
             for b in building_group:
                 w = GAME_WIDTH/granularity
                 h = GAME_HEIGHT/granularity
                 rect = (x*w,y*h,w,h)
                 if pygame.Rect.colliderect(b.rect, rect):
-                    for x2 in xrange(x-1,x+2):
-                        for y2 in xrange(y-1,y+2):
+                    for x2 in range(x-1,x+2):
+                        for y2 in range(y-1,y+2):
                             if x2 >= 0 and x2 < granularity and y2 >= 0 and y2 < granularity:
                                 grid[x2][y2]["building_group"].add(b)
 

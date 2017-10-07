@@ -48,7 +48,7 @@ def fire_weapon(dude, homing_group, grenade_group, bullet_group,
             if dude.ammo[3] == 0:
                 dude.weapon = 0
             bullets = [BulletSprite(dude.position, direction + x, dude)
-                        for x in xrange(-8,12,4)]
+                        for x in range(-8,12,4)]
             for bullet in bullets:
                 bullet_group.add(bullet)
             dude.shot_delay = bullets[0].SHOT_DELAY*2
@@ -93,22 +93,22 @@ def main():
     button_index = {"a":0, "b":1, "x":2, "y":3, "left_bumper":4, "right_bumper":5,
                     "back":6, "start":7, "left_click":8, "right_click":9}
     num_joysticks = pygame.joystick.get_count()
-    buttons = [[False for x in xrange(0,10)] for j in xrange(0,num_joysticks)]
-    old_buttons = [[False for x in xrange(0,10)] for j in xrange(0,num_joysticks)]
-    last_hat = [(0,0) for x in xrange(0,num_joysticks)]
+    buttons = [[False for x in range(0,10)] for j in range(0,num_joysticks)]
+    old_buttons = [[False for x in range(0,10)] for j in range(0,num_joysticks)]
+    last_hat = [(0,0) for x in range(0,num_joysticks)]
     joysticks = []
-    print "found ", num_joysticks, "joysticks"
+    print("found ", num_joysticks, "joysticks")
     if num_joysticks >0:
-        for i in xrange(0,num_joysticks):
+        for i in range(0,num_joysticks):
             joysticks.insert(i,pygame.joystick.Joystick(i))
             joysticks[i].init()
 
-            print 'found ', joysticks[i].get_name(), ' with:'
-            print '     ', joysticks[i].get_numbuttons(), ' buttons'
-            print '     ', joysticks[i].get_numhats(), ' hats'
-            print '     ', joysticks[i].get_numaxes(), ' analogue axes'
+            print('found ', joysticks[i].get_name(), ' with:')
+            print('     ', joysticks[i].get_numbuttons(), ' buttons')
+            print('     ', joysticks[i].get_numhats(), ' hats')
+            print('     ', joysticks[i].get_numaxes(), ' analogue axes')
     else:
-        print "You don't have a joystick connected, using mouse and keyboard (single player only)"
+        print("You don't have a joystick connected, using mouse and keyboard (single player only)")
    # screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), FULLSCREEN)
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
@@ -133,7 +133,7 @@ def main():
     controlpic.set_colorkey((255,153,255))
     weapons = ["pistol","automatic","shotgun","grenade","homing"]
     weapon_images = [pygame.image.load(os.path.join('images', 'weapon%d.gif' % (x+1)))
-                        for x in xrange(0,len(weapons))]
+                        for x in range(0,len(weapons))]
     for w in weapon_images:
         w.set_colorkey((255,153,255))
     #CREATE THE PLAYER AND OTHER SPRITE GROUPS
@@ -162,7 +162,7 @@ def main():
     c.position = dude.position
     c.rect.center = c.position
     cursor_group.add(c)
-    for x in xrange(1, num_joysticks):
+    for x in range(1, num_joysticks):
         dude = DudeSprite((dude.x - 40,dude.y), x)
         dude_group.add(dude)
         c = Cursor(x)
@@ -175,8 +175,8 @@ def main():
                 "dude_group":pygame.sprite.Group(),
                 "building_group":pygame.sprite.Group(),
                 "item_group":pygame.sprite.Group()}
-                    for x in xrange(granularity)]
-                        for y in xrange(granularity)]
+                    for x in range(granularity)]
+                        for y in range(granularity)]
 
     #Load the levels
     levels = load_levels()
@@ -211,7 +211,7 @@ def main():
                     pygame.draw.rect(screen, color.Color("green"), (GAME_WIDTH+51,
                                                                     dude.player*46+11,
                                                                     dude.health*2.4, 6))
-                for x in xrange(1,4):
+                for x in range(1,4):
                     pygame.draw.line(screen, color.Color("black"),
                                         (GAME_WIDTH+51+x*60, dude.player*46+11),
                                         (GAME_WIDTH+51+x*60, dude.player*46+16))
@@ -221,7 +221,7 @@ def main():
                                                                     240, 6))
                 pygame.draw.rect(screen, color.Color("cyan"), (GAME_WIDTH+51, dude.player*46+22,
                                                                     dude.stamina*2.4, 6))
-                for x in xrange(1,4):
+                for x in range(1,4):
                     pygame.draw.line(screen, color.Color("black"),
                                         (GAME_WIDTH+51+x*60, dude.player*46+22),
                                         (GAME_WIDTH+51+x*60, dude.player*46+27))
@@ -445,7 +445,7 @@ def main():
                     last_hat[i] = joysticks[i].get_hat(0)
 
                     #get the button presses
-                    for x in xrange(0,10):
+                    for x in range(0,10):
                         buttons[i][x] = joysticks[i].get_button(x)
 
                     #if they push y make them use a health pack
@@ -495,7 +495,7 @@ def main():
                         refresh = True
 
                     #save old button presses
-                    for x in xrange(0,10):
+                    for x in range(0,10):
                         old_buttons[i][x] = joysticks[i].get_button(x)
 
             else: #If no joysticks are attatched
@@ -556,8 +556,8 @@ def main():
                             elif event.key == K_c:
                                 for d in dude_group:
                                     d.health_packs = 5
-                                    d.ammo = [1000 for x in xrange(6)]
-                                    d.weapons = [True for x in xrange(6)]
+                                    d.ammo = [1000 for x in range(6)]
+                                    d.weapons = [True for x in range(6)]
                             elif event.key == K_h:
                                 dude.use_health()
                                 #Uncomment following lines to allow the dude to revive himself
@@ -609,8 +609,8 @@ def main():
                         cursor.visible = True
             #####GRAPHICS RENDERING AND POSITION UPDATING#####
             #RESET THE GRID
-            for x in xrange(granularity):
-                for y in xrange(granularity):
+            for x in range(granularity):
+                for y in range(granularity):
                     grid[x][y]["enemy_group"].empty()
                     grid[x][y]["dude_group"].empty()
                     grid[x][y]["item_group"].empty()
@@ -630,8 +630,8 @@ def main():
 
             #Display the number of enemies in each square if I set this to true
             if display_grid:
-                for x in xrange(granularity):
-                    for y in xrange(granularity):
+                for x in range(granularity):
+                    for y in range(granularity):
                         num = 0
                         for sprite in grid[x][y]["enemy_group"]:
                             num += 1
@@ -781,7 +781,7 @@ def main():
                         cursor.yspeed = 0
 
                     #get the button presses
-                    for x in xrange(0,10):
+                    for x in range(0,10):
                         buttons[i][x] = joysticks[i].get_button(x)
 
                     #pause or unpause the game
@@ -828,7 +828,7 @@ def main():
                                             pygame.mouse.set_pos(c.position)
 
                     #save the old button presses
-                    for x in xrange(0,10):
+                    for x in range(0,10):
                         old_buttons[i][x] = joysticks[i].get_button(x)
             else: #if no joystick make it follow mouse
                 for c in cursor_group:
